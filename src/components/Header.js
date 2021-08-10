@@ -183,7 +183,7 @@ const Header = ({
           {theme === 'light' ? <icons.MoonFill /> : <icons.SunFill />}
         </Toggle>
         <Wrapper justifyContent="center">
-          <ButtonLink className="button" bg="content.primary" color="content.secondary" href="https://github.com/artcoholic/akar-icons#readme" target="_blank" rel="noopener">
+          <ButtonLink className="button" bg="content.primary" color="content.secondary" href="https://github.com/artcoholic/akar-icons-app#readme" target="_blank" rel="noopener">
             <icons.Paper size={16} style={{ marginRight: 8 }} /> Read the docs <icons.ArrowUpRight size={16} style={{ marginLeft: 8 }} />
           </ButtonLink>
           <ButtonLink className="button" bg="bg.primary" color="content.primary" href="https://paypal.me/awibawa/5" target="_blank" rel="noopener">
