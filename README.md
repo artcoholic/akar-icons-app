@@ -28,8 +28,8 @@ This method is the simplest to use because you only need to add the script to th
 
 Check out the full documentation at [akar-icons-fonts](https://github.com/artcoholic/akar-icons-fonts) repo page.
 
-### 2. React
-The React icon component library can be installed through `npm i akar-icons`. All icons can be configured with inline props with `color`, `size`, and `strokeWidth` including inline `style` objects.
+### 2. React Components
+The React icon component library can be installed through npm. All icons can be configured with inline props with `color`, `size`, and `strokeWidth` including inline `style` objects.
 
 ```jsx
 import { ArrowRight, Star, LinkOut } from 'akar-icons';
