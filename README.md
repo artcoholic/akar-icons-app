@@ -8,7 +8,7 @@ Akar is a perfectly rounded icon library made for designers, developers, and pre
 ## Usage
 There are currently 2 ways of implementing Akar Icons library to your website. The simplest one is through the [Icon Fonts](https://github.com/artcoholic/akar-icons-fonts) library just like Font Awesome and the other one is the [React](https://github.com/artcoholic/akar-icons) component package. 
 
-### Icon Fonts
+### 1. Icon Fonts
 This method is the simplest to use because you only need to add the script to the document `<head>`, and reference the icons with an `<i/>` tag along with the appropriate class. Icon fonts are HTML/CSS under the hood so you can style and manipulate it just like any other HTML element.
 
 ```html
@@ -28,7 +28,7 @@ This method is the simplest to use because you only need to add the script to th
 
 Check out the full documentation at [akar-icons-fonts](https://github.com/artcoholic/akar-icons-fonts) repo page.
 
-### React
+### 2. React
 The React icon component library can be installed through `npm i akar-icons`. All icons can be configured with inline props with `color`, `size`, and `strokeWidth` including inline `style` objects.
 
 ```jsx
