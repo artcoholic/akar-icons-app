@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Akar Icons
+Akar is a perfectly rounded icon library made for designers, developers, and pretty much everyone. Use this library to bring life into your user interface and experience. Free to use for your personal and commercial projects. Start creating! Explore all of our icons at [akaricons.com](https://akaricons.com).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<a href="https://akaricons.com" target="_blank">
+  <img alt="akar icons" src="https://repository-images.githubusercontent.com/306119910/c3a57000-2be0-11eb-88a2-2714f9bafcd4">
+</a>
 
-## Available Scripts
+## Usage
+There are currently 2 ways of implementing Akar Icons library to your website. The simplest one is through the [Icon Fonts](https://github.com/artcoholic/akar-icons-fonts) library just like Font Awesome and the other one is the [React](https://github.com/artcoholic/akar-icons) component package. 
 
-In the project directory, you can run:
+### Icon Fonts
+This method is the simplest to use because you only need to add the script to the document `<head>`, and reference the icons with an `<i/>` tag along with the appropriate class. Icon fonts are HTML/CSS under the hood so you can style and manipulate it just like any other HTML element.
 
-### `yarn start`
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+  </head>
+  <body>
+    <!-- EXAMPLE ICONS -->
+    <i class="ai-cross"></i>
+    <i class="ai-circle"></i>
+    <i class="ai-heart"></i>
+  </body>
+</html>
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Check out the full documentation at [akar-icons-fonts](https://github.com/artcoholic/akar-icons-fonts) repo page.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### React
+The React icon component library can be installed through `npm i akar-icons`. All icons can be configured with inline props with `color`, `size`, and `strokeWidth` including inline `style` objects.
 
-### `yarn test`
+```jsx
+import { ArrowRight, Star, LinkOut } from 'akar-icons';
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+const MyComponent = () => {
+  return (
+    <div>
+      <ArrowRight />
+      <Star color="yellow" size={32} strokeWidth={3} style={{ display: "block" }}/>
+      <LinkOut />
+    </div>
+  );
+};
 
-### `yarn build`
+export default MyComponent;
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Check out the full documentation at [akar-icons](https://github.com/artcoholic/akar-icons) repo page.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Related Projects
+* [akar-icons](https://github.com/artcoholic/akar-icons) - Akar icons as React components.
+* [akar-icons-fonts](https://github.com/artcoholic/akar-icons-fonts) - Akar icons as icon fonts.
+* [akar-icons-svelte](https://github.com/WilliamVenner/akar-icons-svelte) - Akar icons as Svelte components.
+* [blade-akar-icons](https://github.com/codeat3/blade-akar-icons) - A package to easily make use of Akar Icons in your Laravel Blade views.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Author
+Arturo Wibawa ([@agwibawa](https://twitter.com/agwibawa))
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+[MIT License](./LICENSE), Copyright © 2020-present Arturo Wibawa.
