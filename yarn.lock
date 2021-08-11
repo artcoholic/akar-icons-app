@@ -2414,11 +2414,6 @@
     "require-from-string" "^2.0.2"
     "uri-js" "^4.2.2"
 
-"akar-icons@^1.8.4":
-  "integrity" "sha512-BI5kkvDLDmmhs9lpNS366Ymr2IIIUMjLCnp734ka2zjyIyrQS3jUE7QHIYdbr9JUZQ5eDklDcIeokByr3az7gQ=="
-  "resolved" "https://registry.npmjs.org/akar-icons/-/akar-icons-1.8.4.tgz"
-  "version" "1.8.4"
-
 "alphanum-sort@^1.0.0":
   "integrity" "sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM="
   "resolved" "https://registry.npmjs.org/alphanum-sort/-/alphanum-sort-1.0.2.tgz"

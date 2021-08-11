@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^2.0.3",
-    "akar-icons": "^1.8.4",
     "framer-motion": "^4.1.17",
     "fuse.js": "^6.4.6",
     "normalize.css": "^8.0.1",
