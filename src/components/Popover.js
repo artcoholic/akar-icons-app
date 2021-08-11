@@ -72,8 +72,8 @@ const Header = styled.div`
   }
 `
 
-const ReactCode = styled.div`
-  padding: 16px;
+const CodeSnippet = styled.div`
+  padding: 16px 16px 0;
   .label {
     font-size: 14px;
     margin-bottom: .5em;
@@ -145,7 +145,7 @@ const ReactCode = styled.div`
 `
 
 const CopySVGContainer = styled.div`
-  padding: 0 16px 16px;
+  padding: 16px;
 `
 const CopySVGButton = styled.button`
   ${color}
@@ -192,8 +192,8 @@ const Popover = ({ open, setOpen, name, icons, size, copiedSVG, setCopiedSVG, ad
     document.body.removeChild(el);
     setCopiedSVG(true);
   }
-  function copySnippet() {
-    const snippet = document.getElementById('reactSnippet');
+  function copySnippet(type) {
+    const snippet = document.getElementById(`${type}`);
     snippet.select(snippet.value);
     snippet.setSelectionRange(0, 99999);
     document.execCommand("copy");
@@ -217,18 +217,30 @@ const Popover = ({ open, setOpen, name, icons, size, copiedSVG, setCopiedSVG, ad
               </div>
               <button className="close-btn" onClick={() => setOpen(false)}><icons.Cross size={16} /></button>
             </Header>
-            <ReactCode>
+            <CodeSnippet>
               <div className="label">React snippet</div>
               <div className="snippet-box">
                 <input type="text" value={`<${name} size={${size}} />`} id="reactSnippet" readOnly />
-                <button className="copy-snippet-btn" onClick={copySnippet}>
+                <button className="copy-snippet-btn" onClick={() => copySnippet('reactSnippet')}>
                   <span className="tooltip" id="myTooltip">
                     {copiedSnippet ? 'Copied!' : 'Copy snippet'}
                   </span>
                   {copiedSnippet ? <icons.CircleCheckFill size={16} /> : <icons.Copy size={16} />}
                 </button>
               </div>
-            </ReactCode>
+            </CodeSnippet>
+            <CodeSnippet>
+              <div className="label">HTML/CSS snippet</div>
+              <div className="snippet-box">
+                <input type="text" value={`<i class="ai-${name}"></i>`} id="iFontSnippet" readOnly />
+                <button className="copy-snippet-btn" onClick={() => copySnippet('iFontSnippet')}>
+                  <span className="tooltip" id="myTooltip">
+                    {copiedSnippet ? 'Copied!' : 'Copy snippet'}
+                  </span>
+                  {copiedSnippet ? <icons.CircleCheckFill size={16} /> : <icons.Copy size={16} />}
+                </button>
+              </div>
+            </CodeSnippet>
             <CopySVGContainer>
               <CopySVGButton
                 bg={copiedSVG ? "bg.primary" : "content.primary"}
@@ -237,7 +249,7 @@ const Popover = ({ open, setOpen, name, icons, size, copiedSVG, setCopiedSVG, ad
                 copied={copiedSVG}
               >
                 {copiedSVG ? <icons.CircleCheckFill size={16} /> : <icons.Copy size={16} />}
-                {copiedSVG ? "Copied to clipboard!" : "Copy SVG"}
+                {copiedSVG ? "SVG copied to clipboard!" : "Copy SVG"}
               </CopySVGButton>
             </CopySVGContainer>
           </Wrapper>

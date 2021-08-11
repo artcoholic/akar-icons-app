@@ -40,14 +40,17 @@ const SearchInput = styled.input`
 
 const ClearButton = styled.button`
   position: absolute;
-  right: 0px;
+  right: 6px;
   transform: translateX(0);
-  padding: 14px;
+  padding: 11px;
   background: none;
   border: none;
   cursor: pointer;
   color: ${props => props.theme.colors.content.primary};
   border-radius: 4px;
+  &:hover {
+    background: ${props => props.theme.colors.bg.secondary};
+  }
   svg {
     display: block;
     position: relative;

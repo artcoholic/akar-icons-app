@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import DarkMode from './components/DarkMode';
 import { lightTheme, darkTheme, GlobalStyles } from './theme';
-import * as icons from 'akar-icons';
+import * as icons from './icons';
 
 import Header from './components/Header';
 import IconWrapper from './components/IconWrapper';

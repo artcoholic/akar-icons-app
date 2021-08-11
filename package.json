@@ -19,9 +19,13 @@
     "library",
     "icons"
   ],
+  "type": "module",
+  "config": {
+    "style": "stroke"
+  },
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^2.0.3",
-    "akar-icons": "^1.8.2",
+    "akar-icons": "^1.8.4",
     "framer-motion": "^4.1.17",
     "fuse.js": "^6.4.6",
     "normalize.css": "^8.0.1",
@@ -39,7 +43,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "fetch": "node bin/fetchSVG.js",
+    "generate": "sudo rm -rf src/icons/* && node --experimental-json-modules bin/build.js"
   },
   "eslintConfig": {
     "extends": [
@@ -63,7 +69,15 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "cheerio": "^1.0.0-rc.10",
+    "dotenv": "^8.2.0",
+    "figma-js": "^1.14.0",
+    "fs-extra": "^8.1.0",
     "gh-pages": "^3.2.3",
+    "got": "^11.8.2",
+    "p-queue": "^7.1.0",
+    "prettier-eslint": "^13.0.0",
+    "svgo": "^1.3.2",
     "uppercamelcase": "^3.0.0"
   }
 }
