@@ -15,7 +15,7 @@ const Envelope = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Envelope"
+      className="ai-Envelope"
     >
       <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6z"></path>
       <path d="M2 8l7.501 6.001a4 4 0 0 0 4.998 0L22 8"></path>
@@ -31,7 +31,6 @@ Envelope.propTypes = {
 Envelope.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Envelope;

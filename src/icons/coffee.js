@@ -15,7 +15,7 @@ const Coffee = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Coffee"
+      className="ai-Coffee"
     >
       <path d="M11 7c4.418 0 8 .895 8 2s-3.582 2-8 2-8-.895-8-2c0-.357.375-.693 1.033-.984"></path>
       <path d="M3 9v9.343c0 1.061.44 2.08 1.409 2.513C5.624 21.399 7.711 22 11 22c3.29 0 5.377-.601 6.591-1.144.968-.433 1.409-1.452 1.409-2.513V9"></path>
@@ -35,7 +35,6 @@ Coffee.propTypes = {
 Coffee.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Coffee;

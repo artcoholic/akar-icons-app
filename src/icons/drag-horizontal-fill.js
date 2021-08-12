@@ -11,7 +11,7 @@ const DragHorizontalFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="DragHorizontalFill"
+      className="ai-DragHorizontalFill"
     >
       <path
         fillRule="evenodd"
@@ -55,7 +55,6 @@ DragHorizontalFill.propTypes = {
 DragHorizontalFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default DragHorizontalFill;

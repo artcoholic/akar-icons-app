@@ -15,7 +15,7 @@ const Hashtag = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Hashtag"
+      className="ai-Hashtag"
     >
       <path d="M10 3L6 21"></path>
       <path d="M18 3l-4 18"></path>
@@ -33,7 +33,6 @@ Hashtag.propTypes = {
 Hashtag.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Hashtag;

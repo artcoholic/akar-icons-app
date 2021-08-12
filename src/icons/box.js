@@ -15,7 +15,7 @@ const Box = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Box"
+      className="ai-Box"
     >
       <rect x="3" y="3" width="18" height="18" rx="4"></rect>
     </svg>
@@ -30,7 +30,6 @@ Box.propTypes = {
 Box.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Box;

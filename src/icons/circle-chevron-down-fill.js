@@ -11,7 +11,7 @@ const CircleChevronDownFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="CircleChevronDownFill"
+      className="ai-CircleChevronDownFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ CircleChevronDownFill.propTypes = {
 CircleChevronDownFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default CircleChevronDownFill;

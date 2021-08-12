@@ -15,7 +15,7 @@ const PeopleMultiple = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="PeopleMultiple"
+      className="ai-PeopleMultiple"
     >
       <circle cx="7" cy="5" r="3"></circle>
       <path d="M10 12H5.898a3 3 0 0 0-2.976 2.628l-.641 5.124A2 2 0 0 0 4.266 22H9"></path>
@@ -33,7 +33,6 @@ PeopleMultiple.propTypes = {
 PeopleMultiple.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default PeopleMultiple;

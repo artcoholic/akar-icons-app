@@ -15,7 +15,7 @@ const AlignVerticalCenter = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="AlignVerticalCenter"
+      className="ai-AlignVerticalCenter"
     >
       <path d="M21 12H3"></path>
       <path d="M6 16v4h4v-4"></path>
@@ -34,7 +34,6 @@ AlignVerticalCenter.propTypes = {
 AlignVerticalCenter.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default AlignVerticalCenter;

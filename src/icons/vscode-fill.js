@@ -11,7 +11,7 @@ const VscodeFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="VscodeFill"
+      className="ai-VscodeFill"
     >
       <path d="M.228 8.37s-.584-.427.117-.995L1.98 5.897s.467-.497.962-.064l15.081 11.542v5.534s-.007.87-1.11.774L.227 8.369z"></path>
       <path d="M4.116 11.937L.228 15.509s-.4.3 0 .837l1.805 1.66s.429.465 1.062-.065l4.121-3.158-3.1-2.846z"></path>
@@ -29,7 +29,6 @@ VscodeFill.propTypes = {
 VscodeFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default VscodeFill;

@@ -11,7 +11,7 @@ const MoreHorizontalFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="MoreHorizontalFill"
+      className="ai-MoreHorizontalFill"
     >
       <path
         fillRule="evenodd"
@@ -40,7 +40,6 @@ MoreHorizontalFill.propTypes = {
 MoreHorizontalFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default MoreHorizontalFill;

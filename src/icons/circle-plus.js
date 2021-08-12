@@ -15,7 +15,7 @@ const CirclePlus = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="CirclePlus"
+      className="ai-CirclePlus"
     >
       <path d="M12 8v4m0 0v4m0-4h4m-4 0H8"></path>
       <circle cx="12" cy="12" r="10"></circle>
@@ -31,7 +31,6 @@ CirclePlus.propTypes = {
 CirclePlus.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default CirclePlus;

@@ -15,7 +15,7 @@ const Square = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Square"
+      className="ai-Square"
     >
       <rect x="3" y="3" width="18" height="18" rx="2"></rect>
     </svg>
@@ -30,7 +30,6 @@ Square.propTypes = {
 Square.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Square;

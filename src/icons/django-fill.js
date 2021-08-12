@@ -11,7 +11,7 @@ const DjangoFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="DjangoFill"
+      className="ai-DjangoFill"
     >
       <path
         fillRule="evenodd"
@@ -32,7 +32,6 @@ DjangoFill.propTypes = {
 DjangoFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default DjangoFill;

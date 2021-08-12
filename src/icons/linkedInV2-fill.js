@@ -11,7 +11,7 @@ const LinkedInV2Fill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="LinkedInV2Fill"
+      className="ai-LinkedInV2Fill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ LinkedInV2Fill.propTypes = {
 LinkedInV2Fill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default LinkedInV2Fill;

@@ -11,7 +11,7 @@ const NpmFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="NpmFill"
+      className="ai-NpmFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ NpmFill.propTypes = {
 NpmFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default NpmFill;

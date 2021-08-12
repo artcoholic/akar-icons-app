@@ -15,7 +15,7 @@ const Computing = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Computing"
+      className="ai-Computing"
     >
       <rect x="5" y="5" width="14" height="14" rx="2"></rect>
       <path d="M8 5V2"></path>
@@ -38,7 +38,6 @@ Computing.propTypes = {
 Computing.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Computing;

@@ -15,7 +15,7 @@ const Tetragon = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Tetragon"
+      className="ai-Tetragon"
     >
       <path d="M3.575 13.388a1.962 1.962 0 0 1 0-2.776l7.037-7.037a1.962 1.962 0 0 1 2.776 0l7.037 7.037a1.963 1.963 0 0 1 0 2.776l-7.037 7.037a1.963 1.963 0 0 1-2.776 0l-7.037-7.037z"></path>
     </svg>
@@ -30,7 +30,6 @@ Tetragon.propTypes = {
 Tetragon.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Tetragon;

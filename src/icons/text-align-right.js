@@ -15,7 +15,7 @@ const TextAlignRight = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="TextAlignRight"
+      className="ai-TextAlignRight"
     >
       <path d="M3 6h18m-10 6h10M6 18h15"></path>
     </svg>
@@ -30,7 +30,6 @@ TextAlignRight.propTypes = {
 TextAlignRight.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default TextAlignRight;

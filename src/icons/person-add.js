@@ -15,7 +15,7 @@ const PersonAdd = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="PersonAdd"
+      className="ai-PersonAdd"
     >
       <circle cx="12" cy="7" r="5"></circle>
       <path d="M17 22H5.266a2 2 0 0 1-1.985-2.248l.39-3.124A3 3 0 0 1 6.649 14H7"></path>
@@ -33,7 +33,6 @@ PersonAdd.propTypes = {
 PersonAdd.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default PersonAdd;

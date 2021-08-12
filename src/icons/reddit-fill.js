@@ -11,7 +11,7 @@ const RedditFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="RedditFill"
+      className="ai-RedditFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ RedditFill.propTypes = {
 RedditFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default RedditFill;

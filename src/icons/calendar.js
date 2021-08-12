@@ -15,7 +15,7 @@ const Calendar = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Calendar"
+      className="ai-Calendar"
     >
       <rect x="2" y="4" width="20" height="18" rx="4"></rect>
       <path d="M8 2v4"></path>
@@ -33,7 +33,6 @@ Calendar.propTypes = {
 Calendar.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Calendar;

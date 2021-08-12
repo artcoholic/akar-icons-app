@@ -11,7 +11,7 @@ const FacebookFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="FacebookFill"
+      className="ai-FacebookFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ FacebookFill.propTypes = {
 FacebookFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default FacebookFill;

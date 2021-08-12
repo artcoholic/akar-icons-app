@@ -11,7 +11,7 @@ const SunFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="SunFill"
+      className="ai-SunFill"
     >
       <path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"></path>
       <path
@@ -31,7 +31,6 @@ SunFill.propTypes = {
 SunFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default SunFill;

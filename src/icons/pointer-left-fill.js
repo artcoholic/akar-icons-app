@@ -11,7 +11,7 @@ const PointerLeftFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="PointerLeftFill"
+      className="ai-PointerLeftFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ PointerLeftFill.propTypes = {
 PointerLeftFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default PointerLeftFill;

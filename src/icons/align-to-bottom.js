@@ -15,7 +15,7 @@ const AlignToBottom = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="AlignToBottom"
+      className="ai-AlignToBottom"
     >
       <path d="M3 22h18"></path>
       <path d="M12 2v15"></path>
@@ -32,7 +32,6 @@ AlignToBottom.propTypes = {
 AlignToBottom.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default AlignToBottom;

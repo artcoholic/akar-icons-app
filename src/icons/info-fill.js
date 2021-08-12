@@ -11,7 +11,7 @@ const InfoFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="InfoFill"
+      className="ai-InfoFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ InfoFill.propTypes = {
 InfoFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default InfoFill;

@@ -11,7 +11,7 @@ const TwitchFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="TwitchFill"
+      className="ai-TwitchFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ TwitchFill.propTypes = {
 TwitchFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default TwitchFill;

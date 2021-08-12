@@ -15,7 +15,7 @@ const Camera = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Camera"
+      className="ai-Camera"
     >
       <path d="M6.233 5.834l.445-2.226A2 2 0 0 1 8.64 2h6.72a2 2 0 0 1 1.962 1.608l.445 2.226a1.879 1.879 0 0 0 1.387 1.454A3.758 3.758 0 0 1 22 10.934V18a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4v-7.066a3.758 3.758 0 0 1 2.846-3.646 1.879 1.879 0 0 0 1.387-1.454z"></path>
       <circle cx="12" cy="14" r="4"></circle>
@@ -32,7 +32,6 @@ Camera.propTypes = {
 Camera.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Camera;

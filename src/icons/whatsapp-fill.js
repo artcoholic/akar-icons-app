@@ -11,7 +11,7 @@ const WhatsappFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="WhatsappFill"
+      className="ai-WhatsappFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ WhatsappFill.propTypes = {
 WhatsappFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default WhatsappFill;

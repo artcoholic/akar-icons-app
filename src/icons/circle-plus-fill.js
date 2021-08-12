@@ -11,7 +11,7 @@ const CirclePlusFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="CirclePlusFill"
+      className="ai-CirclePlusFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ CirclePlusFill.propTypes = {
 CirclePlusFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default CirclePlusFill;

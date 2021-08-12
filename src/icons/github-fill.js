@@ -11,7 +11,7 @@ const GithubFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="GithubFill"
+      className="ai-GithubFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ GithubFill.propTypes = {
 GithubFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default GithubFill;

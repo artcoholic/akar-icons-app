@@ -15,7 +15,7 @@ const FullScreen = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="FullScreen"
+      className="ai-FullScreen"
     >
       <path d="M2 7V2h5"></path>
       <path d="M22 7V2h-5"></path>
@@ -33,7 +33,6 @@ FullScreen.propTypes = {
 FullScreen.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default FullScreen;

@@ -15,7 +15,7 @@ const FaceVeryHappy = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="FaceVeryHappy"
+      className="ai-FaceVeryHappy"
     >
       <circle cx="12" cy="12" r="10"></circle>
       <path d="M8 9.05v-.1"></path>
@@ -33,7 +33,6 @@ FaceVeryHappy.propTypes = {
 FaceVeryHappy.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default FaceVeryHappy;

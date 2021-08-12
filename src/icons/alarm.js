@@ -15,7 +15,7 @@ const Alarm = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Alarm"
+      className="ai-Alarm"
     >
       <circle cx="12" cy="13" r="9"></circle>
       <path d="M15.5 9.5L12 13"></path>
@@ -36,7 +36,6 @@ Alarm.propTypes = {
 Alarm.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Alarm;

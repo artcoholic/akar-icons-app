@@ -15,7 +15,7 @@ const Pause = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Pause"
+      className="ai-Pause"
     >
       <path d="M7 5v14M17 5v14"></path>
     </svg>
@@ -30,7 +30,6 @@ Pause.propTypes = {
 Pause.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Pause;

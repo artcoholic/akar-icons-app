@@ -15,7 +15,7 @@ const Minus = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Minus"
+      className="ai-Minus"
     >
       <path d="M20 12H4"></path>
     </svg>
@@ -30,7 +30,6 @@ Minus.propTypes = {
 Minus.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Minus;

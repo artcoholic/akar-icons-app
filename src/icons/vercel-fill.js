@@ -11,7 +11,7 @@ const VercelFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="VercelFill"
+      className="ai-VercelFill"
     >
       <path d="M12 1l12 21H0L12 1z"></path>
     </svg>
@@ -26,7 +26,6 @@ VercelFill.propTypes = {
 VercelFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default VercelFill;

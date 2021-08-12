@@ -15,7 +15,7 @@ const CloudDownload = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="CloudDownload"
+      className="ai-CloudDownload"
     >
       <path d="M12 22v-9m0 9l-2.5-2m2.5 2l2.5-2"></path>
       <path d="M5.034 9.117A4.002 4.002 0 0 0 6 17h1"></path>
@@ -33,7 +33,6 @@ CloudDownload.propTypes = {
 CloudDownload.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default CloudDownload;

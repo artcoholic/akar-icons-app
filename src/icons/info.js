@@ -15,7 +15,7 @@ const Info = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Info"
+      className="ai-Info"
     >
       <circle cx="12" cy="12" r="10"></circle>
       <path d="M12 7h.01"></path>
@@ -33,7 +33,6 @@ Info.propTypes = {
 Info.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Info;

@@ -15,7 +15,7 @@ const Gift = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Gift"
+      className="ai-Gift"
     >
       <rect x="3" y="8" width="18" height="14" rx="2"></rect>
       <path d="M12 5a3 3 0 1 0-3 3"></path>
@@ -34,7 +34,6 @@ Gift.propTypes = {
 Gift.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Gift;

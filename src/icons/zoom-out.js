@@ -15,7 +15,7 @@ const ZoomOut = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="ZoomOut"
+      className="ai-ZoomOut"
     >
       <path d="M21 21l-4.486-4.494M19 10.5a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0z"></path>
       <path d="M13 10.5H8"></path>
@@ -31,7 +31,6 @@ ZoomOut.propTypes = {
 ZoomOut.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default ZoomOut;

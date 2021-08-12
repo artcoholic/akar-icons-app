@@ -11,7 +11,7 @@ const CodepenFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="CodepenFill"
+      className="ai-CodepenFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ CodepenFill.propTypes = {
 CodepenFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default CodepenFill;

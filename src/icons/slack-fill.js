@@ -11,7 +11,7 @@ const SlackFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="SlackFill"
+      className="ai-SlackFill"
     >
       <path
         fillRule="evenodd"
@@ -45,7 +45,6 @@ SlackFill.propTypes = {
 SlackFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default SlackFill;

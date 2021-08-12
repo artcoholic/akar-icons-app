@@ -167,10 +167,16 @@ const CopySVGButton = styled.button`
 `
 
 const Popover = ({ open, setOpen, name, icons, size, copiedSVG, setCopiedSVG, addSpace }) => {
-  const [copiedSnippet, setCopiedSnippet] = useState(false);
+  const [reactSnippet, setReactSnippet] = useState(false);
+  const [iconFontSnippet, setIconFontSnippet] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => { setCopiedSnippet(false); }, 3000);
+    const timeout = setTimeout(() => { setReactSnippet(false); }, 3000);
+    return () => clearTimeout(timeout);
+  });
+
+  useEffect(() => {
+    const timeout = setTimeout(() => { setIconFontSnippet(false); }, 3000);
     return () => clearTimeout(timeout);
   });
 
@@ -181,7 +187,7 @@ const Popover = ({ open, setOpen, name, icons, size, copiedSVG, setCopiedSVG, ad
 
   const Icon = icons[name];
   const copySVG = (i) => {
-    const svg = document.getElementById(`${i}`);
+    const svg = document.querySelector(`.ai-${i}`);
     const s = new XMLSerializer();
     const str = s.serializeToString(svg);
     const el = document.createElement('textarea');
@@ -197,8 +203,13 @@ const Popover = ({ open, setOpen, name, icons, size, copiedSVG, setCopiedSVG, ad
     snippet.select(snippet.value);
     snippet.setSelectionRange(0, 99999);
     document.execCommand("copy");
-    setCopiedSnippet(true);
+    if (type === 'reactSnippet') {
+      setReactSnippet(true);
+    } else {
+      setIconFontSnippet(true);
+    }
   }
+
   return (
     <AnimatePresence>
       {open && (
@@ -223,21 +234,21 @@ const Popover = ({ open, setOpen, name, icons, size, copiedSVG, setCopiedSVG, ad
                 <input type="text" value={`<${name} size={${size}} />`} id="reactSnippet" readOnly />
                 <button className="copy-snippet-btn" onClick={() => copySnippet('reactSnippet')}>
                   <span className="tooltip" id="myTooltip">
-                    {copiedSnippet ? 'Copied!' : 'Copy snippet'}
+                    {reactSnippet ? 'Copied!' : 'Copy snippet'}
                   </span>
-                  {copiedSnippet ? <icons.CircleCheckFill size={16} /> : <icons.Copy size={16} />}
+                  {reactSnippet ? <icons.CircleCheckFill size={16} /> : <icons.Copy size={16} />}
                 </button>
               </div>
             </CodeSnippet>
             <CodeSnippet>
               <div className="label">HTML/CSS snippet</div>
               <div className="snippet-box">
-                <input type="text" value={`<i class="ai-${name}"></i>`} id="iFontSnippet" readOnly />
-                <button className="copy-snippet-btn" onClick={() => copySnippet('iFontSnippet')}>
+                <input type="text" value={`<i class="ai-${name}"></i>`} id="iconFontSnippet" readOnly />
+                <button className="copy-snippet-btn" onClick={() => copySnippet('iconFontSnippet')}>
                   <span className="tooltip" id="myTooltip">
-                    {copiedSnippet ? 'Copied!' : 'Copy snippet'}
+                    {iconFontSnippet ? 'Copied!' : 'Copy snippet'}
                   </span>
-                  {copiedSnippet ? <icons.CircleCheckFill size={16} /> : <icons.Copy size={16} />}
+                  {iconFontSnippet ? <icons.CircleCheckFill size={16} /> : <icons.Copy size={16} />}
                 </button>
               </div>
             </CodeSnippet>

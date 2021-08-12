@@ -11,7 +11,7 @@ const YarnFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="YarnFill"
+      className="ai-YarnFill"
     >
       <g clipPath="url(#clip0)">
         <path
@@ -38,7 +38,6 @@ YarnFill.propTypes = {
 YarnFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default YarnFill;

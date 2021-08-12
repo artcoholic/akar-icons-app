@@ -15,7 +15,7 @@ const Search = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Search"
+      className="ai-Search"
     >
       <path d="M21 21l-4.486-4.494M19 10.5a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0z"></path>
     </svg>
@@ -30,7 +30,6 @@ Search.propTypes = {
 Search.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Search;

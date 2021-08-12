@@ -15,7 +15,7 @@ const DesktopDevice = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="DesktopDevice"
+      className="ai-DesktopDevice"
     >
       <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6z"></path>
       <path d="M8 20h8"></path>
@@ -31,7 +31,6 @@ DesktopDevice.propTypes = {
 DesktopDevice.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default DesktopDevice;

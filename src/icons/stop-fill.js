@@ -11,7 +11,7 @@ const StopFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="StopFill"
+      className="ai-StopFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ StopFill.propTypes = {
 StopFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default StopFill;

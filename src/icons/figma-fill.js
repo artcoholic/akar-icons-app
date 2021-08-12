@@ -11,7 +11,7 @@ const FigmaFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="FigmaFill"
+      className="ai-FigmaFill"
     >
       <g clipPath="url(#clip0)">
         <path
@@ -37,7 +37,6 @@ FigmaFill.propTypes = {
 FigmaFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default FigmaFill;

@@ -11,7 +11,7 @@ const DragVerticalFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="DragVerticalFill"
+      className="ai-DragVerticalFill"
     >
       <path
         fillRule="evenodd"
@@ -55,7 +55,6 @@ DragVerticalFill.propTypes = {
 DragVerticalFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default DragVerticalFill;

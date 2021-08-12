@@ -15,7 +15,7 @@ const EyeClosed = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="EyeClosed"
+      className="ai-EyeClosed"
     >
       <path d="M2 10s3.5 4 10 4 10-4 10-4"></path>
       <path d="M4 11.645L2 14"></path>
@@ -34,7 +34,6 @@ EyeClosed.propTypes = {
 EyeClosed.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default EyeClosed;

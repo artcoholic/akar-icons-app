@@ -15,7 +15,7 @@ const Microphone = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Microphone"
+      className="ai-Microphone"
     >
       <rect x="8" y="2" width="8" height="13" rx="4"></rect>
       <path d="M18 16.292A7.98 7.98 0 0 1 12 19a7.98 7.98 0 0 1-6-2.708"></path>
@@ -33,7 +33,6 @@ Microphone.propTypes = {
 Microphone.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Microphone;

@@ -15,7 +15,7 @@ const Oval = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Oval"
+      className="ai-Oval"
     >
       <ellipse cx="12" cy="12" rx="8" ry="10"></ellipse>
     </svg>
@@ -30,7 +30,6 @@ Oval.propTypes = {
 Oval.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Oval;

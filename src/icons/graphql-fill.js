@@ -11,7 +11,7 @@ const GraphqlFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="GraphqlFill"
+      className="ai-GraphqlFill"
     >
       <g clipPath="url(#clip0)">
         <path
@@ -37,7 +37,6 @@ GraphqlFill.propTypes = {
 GraphqlFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default GraphqlFill;

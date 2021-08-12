@@ -15,7 +15,7 @@ const ArrowCycle = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="ArrowCycle"
+      className="ai-ArrowCycle"
     >
       <path d="M22 12c0 6-4.39 10-9.806 10C7.792 22 4.24 19.665 3 16"></path>
       <path d="M2 12C2 6 6.39 2 11.806 2 16.209 2 19.76 4.335 21 8"></path>
@@ -33,7 +33,6 @@ ArrowCycle.propTypes = {
 ArrowCycle.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default ArrowCycle;

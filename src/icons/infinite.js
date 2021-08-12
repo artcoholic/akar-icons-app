@@ -15,7 +15,7 @@ const Infinite = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Infinite"
+      className="ai-Infinite"
     >
       <path d="M5.636 16C2.91 16 2 14 2 12s.91-4 3.636-4c3.637 0 9.091 8 12.728 8C21.09 16 22 14 22 12s-.91-4-3.636-4c-3.637 0-9.091 8-12.728 8z"></path>
     </svg>
@@ -30,7 +30,6 @@ Infinite.propTypes = {
 Infinite.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Infinite;

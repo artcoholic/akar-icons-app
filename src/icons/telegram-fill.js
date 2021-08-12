@@ -11,7 +11,7 @@ const TelegramFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="TelegramFill"
+      className="ai-TelegramFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ TelegramFill.propTypes = {
 TelegramFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default TelegramFill;

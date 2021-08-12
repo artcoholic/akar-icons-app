@@ -15,7 +15,7 @@ const ArrowForwardThick = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="ArrowForwardThick"
+      className="ai-ArrowForwardThick"
     >
       <path d="M22 11l-7-9v5C3.047 7 1.668 16.678 2 22c.502-2.685.735-7 13-7v5l7-9z"></path>
     </svg>
@@ -30,7 +30,6 @@ ArrowForwardThick.propTypes = {
 ArrowForwardThick.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default ArrowForwardThick;

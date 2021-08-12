@@ -11,7 +11,7 @@ const CircleXFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="CircleXFill"
+      className="ai-CircleXFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ CircleXFill.propTypes = {
 CircleXFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default CircleXFill;

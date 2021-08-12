@@ -15,7 +15,7 @@ const TriangleAlert = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="TriangleAlert"
+      className="ai-TriangleAlert"
     >
       <path d="M12 9v5"></path>
       <path d="M12 17.5v.5"></path>
@@ -32,7 +32,6 @@ TriangleAlert.propTypes = {
 TriangleAlert.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default TriangleAlert;

@@ -11,7 +11,7 @@ const CssFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="CssFill"
+      className="ai-CssFill"
     >
       <path d="M7.502 0h2.578v1.078h-1.5v1.078h1.5v1.078H7.502V0z"></path>
       <path d="M10.595 0h2.579v.938h-1.5v.187h1.5v2.156h-2.579v-.984h1.5v-.188h-1.5V0z"></path>
@@ -33,7 +33,6 @@ CssFill.propTypes = {
 CssFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default CssFill;

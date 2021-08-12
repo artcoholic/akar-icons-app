@@ -15,7 +15,7 @@ const FaceNeutral = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="FaceNeutral"
+      className="ai-FaceNeutral"
     >
       <circle cx="12" cy="12" r="10"></circle>
       <path d="M8 9.05v-.1"></path>
@@ -33,7 +33,6 @@ FaceNeutral.propTypes = {
 FaceNeutral.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default FaceNeutral;

@@ -15,7 +15,7 @@ const TriangleRight = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="TriangleRight"
+      className="ai-TriangleRight"
     >
       <path d="M17 12L9 6v12l8-6z"></path>
     </svg>
@@ -30,7 +30,6 @@ TriangleRight.propTypes = {
 TriangleRight.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default TriangleRight;

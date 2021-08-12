@@ -11,7 +11,7 @@ const BackspaceFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="BackspaceFill"
+      className="ai-BackspaceFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ BackspaceFill.propTypes = {
 BackspaceFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default BackspaceFill;

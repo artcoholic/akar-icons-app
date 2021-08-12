@@ -15,7 +15,7 @@ const FaceWink = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="FaceWink"
+      className="ai-FaceWink"
     >
       <circle cx="12" cy="12" r="10"></circle>
       <path d="M7 9h2"></path>
@@ -33,7 +33,6 @@ FaceWink.propTypes = {
 FaceWink.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default FaceWink;

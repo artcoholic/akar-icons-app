@@ -11,7 +11,7 @@ const ArrowBackThickFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="ArrowBackThickFill"
+      className="ai-ArrowBackThickFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ ArrowBackThickFill.propTypes = {
 ArrowBackThickFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default ArrowBackThickFill;

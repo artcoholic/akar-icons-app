@@ -15,7 +15,7 @@ const AlignRight = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="AlignRight"
+      className="ai-AlignRight"
     >
       <path d="M22 3v18"></path>
       <rect x="2" y="6" width="16" height="4"></rect>
@@ -32,7 +32,6 @@ AlignRight.propTypes = {
 AlignRight.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default AlignRight;

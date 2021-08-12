@@ -11,7 +11,7 @@ const SquareFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="SquareFill"
+      className="ai-SquareFill"
     >
       <rect x="2" y="2" width="20" height="20" rx="2"></rect>
     </svg>
@@ -26,7 +26,6 @@ SquareFill.propTypes = {
 SquareFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default SquareFill;

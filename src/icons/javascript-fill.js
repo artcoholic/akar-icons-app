@@ -11,7 +11,7 @@ const JavascriptFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="JavascriptFill"
+      className="ai-JavascriptFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ JavascriptFill.propTypes = {
 JavascriptFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default JavascriptFill;

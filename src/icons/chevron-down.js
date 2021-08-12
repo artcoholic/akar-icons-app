@@ -15,7 +15,7 @@ const ChevronDown = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="ChevronDown"
+      className="ai-ChevronDown"
     >
       <path d="M4 9l8 8 8-8"></path>
     </svg>
@@ -30,7 +30,6 @@ ChevronDown.propTypes = {
 ChevronDown.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default ChevronDown;

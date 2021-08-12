@@ -15,7 +15,7 @@ const Stop = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Stop"
+      className="ai-Stop"
     >
       <path d="M8 2L2 8.156V16l6 6h8l6-6V8.156L16 2H8z"></path>
       <path d="M16 12H8"></path>
@@ -31,7 +31,6 @@ Stop.propTypes = {
 Stop.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Stop;

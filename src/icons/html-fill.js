@@ -11,7 +11,7 @@ const HtmlFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="HtmlFill"
+      className="ai-HtmlFill"
     >
       <g clipPath="url(#clip0)">
         <path d="M5.08 0h1.082v1.069h.99V0h1.082v3.236H7.152V2.153h-.99v1.083H5.081V0z"></path>
@@ -41,7 +41,6 @@ HtmlFill.propTypes = {
 HtmlFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default HtmlFill;

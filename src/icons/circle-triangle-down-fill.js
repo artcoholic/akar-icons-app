@@ -11,7 +11,7 @@ const CircleTriangleDownFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="CircleTriangleDownFill"
+      className="ai-CircleTriangleDownFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ CircleTriangleDownFill.propTypes = {
 CircleTriangleDownFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default CircleTriangleDownFill;

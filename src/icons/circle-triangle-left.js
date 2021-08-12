@@ -15,7 +15,7 @@ const CircleTriangleLeft = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="CircleTriangleLeft"
+      className="ai-CircleTriangleLeft"
     >
       <circle cx="12" cy="12" r="10"></circle>
       <path d="M8 12l6-4v8l-6-4z"></path>
@@ -31,7 +31,6 @@ CircleTriangleLeft.propTypes = {
 CircleTriangleLeft.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default CircleTriangleLeft;

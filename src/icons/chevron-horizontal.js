@@ -15,7 +15,7 @@ const ChevronHorizontal = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="ChevronHorizontal"
+      className="ai-ChevronHorizontal"
     >
       <path d="M17 8l4 4-4 4"></path>
       <path d="M7 8l-4 4 4 4"></path>
@@ -31,7 +31,6 @@ ChevronHorizontal.propTypes = {
 ChevronHorizontal.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default ChevronHorizontal;

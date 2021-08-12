@@ -15,7 +15,7 @@ const Width = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Width"
+      className="ai-Width"
     >
       <path d="M22 12H2m20 0l-4 4m4-4l-4-4M2 12l4 4m-4-4l4-4"></path>
     </svg>
@@ -30,7 +30,6 @@ Width.propTypes = {
 Width.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Width;

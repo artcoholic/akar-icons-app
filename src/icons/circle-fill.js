@@ -11,7 +11,7 @@ const CircleFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="CircleFill"
+      className="ai-CircleFill"
     >
       <circle cx="12" cy="12" r="11"></circle>
     </svg>
@@ -26,7 +26,6 @@ CircleFill.propTypes = {
 CircleFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default CircleFill;

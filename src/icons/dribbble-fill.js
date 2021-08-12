@@ -11,7 +11,7 @@ const DribbbleFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="DribbbleFill"
+      className="ai-DribbbleFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ DribbbleFill.propTypes = {
 DribbbleFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default DribbbleFill;

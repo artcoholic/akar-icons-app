@@ -15,7 +15,7 @@ const ShareBox = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="ShareBox"
+      className="ai-ShareBox"
     >
       <path d="M12 3v12m0-12L8 7m4-4l4 4"></path>
       <path d="M2 17l.621 2.485A2 2 0 0 0 4.561 21H19.439a2 2 0 0 0 1.94-1.515L22 17"></path>
@@ -31,7 +31,6 @@ ShareBox.propTypes = {
 ShareBox.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default ShareBox;

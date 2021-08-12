@@ -15,7 +15,7 @@ const ArrowUpLeft = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="ArrowUpLeft"
+      className="ai-ArrowUpLeft"
     >
       <path d="M6 6l12 12"></path>
       <path d="M16 6H6v10"></path>
@@ -31,7 +31,6 @@ ArrowUpLeft.propTypes = {
 ArrowUpLeft.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default ArrowUpLeft;

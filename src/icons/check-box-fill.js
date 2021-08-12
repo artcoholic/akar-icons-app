@@ -11,7 +11,7 @@ const CheckBoxFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="CheckBoxFill"
+      className="ai-CheckBoxFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ CheckBoxFill.propTypes = {
 CheckBoxFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default CheckBoxFill;

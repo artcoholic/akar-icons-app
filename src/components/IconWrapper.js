@@ -37,7 +37,7 @@ const Wrapper = styled.button`
   }
 `
 
-const IconWrapper = ({ children, icon, setOpen, setName, copiedSVG, setCopiedSVG, addSpace }) => {
+const IconWrapper = ({ children, icon, setOpen, setName, setCopiedSVG, addSpace }) => {
 
   useEffect(() => {
     const timeout = setTimeout(() => { setCopiedSVG(false); }, 3000);
@@ -47,7 +47,8 @@ const IconWrapper = ({ children, icon, setOpen, setName, copiedSVG, setCopiedSVG
   const handleClick = (i) => {
     setOpen(true);
     setName(i);
-    const svg = document.getElementById(`${i}`);
+    const svg = document.querySelector(`.ai-${i}`);
+    console.log(svg);
     const s = new XMLSerializer();
     const str = s.serializeToString(svg);
     const el = document.createElement('textarea');

@@ -15,7 +15,7 @@ const Network = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="Network"
+      className="ai-Network"
     >
       <circle cx="18" cy="5" r="3"></circle>
       <circle cx="18" cy="19" r="3"></circle>
@@ -33,7 +33,6 @@ Network.propTypes = {
 Network.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default Network;

@@ -15,7 +15,7 @@ const LightBulb = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      id="LightBulb"
+      className="ai-LightBulb"
     >
       <path d="M10 22h4M5 9a7 7 0 0 1 14 0 6.972 6.972 0 0 1-3 5.734l-.542 2.566a2 2 0 0 1-1.977 1.7h-2.962a2 2 0 0 1-1.977-1.7L8 14.745A6.992 6.992 0 0 1 5 9z"></path>
       <path d="M8 15h8"></path>
@@ -31,7 +31,6 @@ LightBulb.propTypes = {
 LightBulb.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default LightBulb;

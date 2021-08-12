@@ -11,7 +11,7 @@ const CircleAlertFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      id="CircleAlertFill"
+      className="ai-CircleAlertFill"
     >
       <path
         fillRule="evenodd"
@@ -30,7 +30,6 @@ CircleAlertFill.propTypes = {
 CircleAlertFill.defaultProps = {
   color: 'currentColor',
   size: '24',
-  display: 'block',
 };
 
 export default CircleAlertFill;
