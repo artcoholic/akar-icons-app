@@ -52,6 +52,9 @@ const Header = styled.div`
     background-size: 10px 10px;
     background-position: 0 0, 0 5px, 5px -5px, -5px 0px;
     border-radius: 4px;
+    svg {
+      display: block;
+    }
   }
   .icon-name {
     padding: 0 1em;
@@ -67,6 +70,7 @@ const Header = styled.div`
       background: ${props => props.theme.colors.bg.secondary};
     }
     svg {
+      display: block;
       color: ${props => props.theme.colors.content.primary};
     }
   }

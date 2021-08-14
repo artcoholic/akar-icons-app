@@ -47,6 +47,9 @@ const ResetButton = styled.button`
   &:enabled:hover {
     background-color: #e8c031;
   }
+  svg {
+    display: block;
+  }
   @media (min-width: 768px) {
     order: 0;
     margin-left: 12px;
