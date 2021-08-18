@@ -15,7 +15,7 @@ const Block = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Block"
+      className="ai ai-Block"
     >
       <circle cx="12" cy="12" r="10"></circle>
       <path d="M5 19L19 5"></path>

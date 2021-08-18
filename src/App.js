@@ -42,6 +42,9 @@ const NoResults = styled.span`
   span:first-child {
     color: ${props => props.theme.colors.bg.secondary};
   }
+  svg {
+    stroke-width: 1.2;
+  }
 `
 
 const IconContainer = styled.div`

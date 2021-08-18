@@ -11,7 +11,7 @@ const WhatsappFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-WhatsappFill"
+      className="ai ai-WhatsappFill"
     >
       <path
         fillRule="evenodd"

@@ -49,6 +49,7 @@ const ResetButton = styled.button`
   }
   svg {
     display: block;
+    stroke-width: 1.2;
   }
   @media (min-width: 768px) {
     order: 0;

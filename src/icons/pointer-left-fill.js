@@ -11,7 +11,7 @@ const PointerLeftFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-PointerLeftFill"
+      className="ai ai-PointerLeftFill"
     >
       <path
         fillRule="evenodd"

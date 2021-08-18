@@ -15,7 +15,7 @@ const Box = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Box"
+      className="ai ai-Box"
     >
       <rect x="3" y="3" width="18" height="18" rx="4"></rect>
     </svg>

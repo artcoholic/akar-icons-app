@@ -11,7 +11,7 @@ const FacebookFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-FacebookFill"
+      className="ai ai-FacebookFill"
     >
       <path
         fillRule="evenodd"

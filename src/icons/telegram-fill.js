@@ -11,7 +11,7 @@ const TelegramFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-TelegramFill"
+      className="ai ai-TelegramFill"
     >
       <path
         fillRule="evenodd"

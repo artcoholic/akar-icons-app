@@ -15,7 +15,7 @@ const AlignVerticalCenter = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-AlignVerticalCenter"
+      className="ai ai-AlignVerticalCenter"
     >
       <path d="M21 12H3"></path>
       <path d="M6 16v4h4v-4"></path>

@@ -15,7 +15,7 @@ const FullScreen = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-FullScreen"
+      className="ai ai-FullScreen"
     >
       <path d="M2 7V2h5"></path>
       <path d="M22 7V2h-5"></path>

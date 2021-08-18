@@ -11,7 +11,7 @@ const TriangleAlertFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-TriangleAlertFill"
+      className="ai ai-TriangleAlertFill"
     >
       <path
         fillRule="evenodd"

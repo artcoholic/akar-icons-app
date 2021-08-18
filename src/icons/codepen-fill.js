@@ -11,7 +11,7 @@ const CodepenFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-CodepenFill"
+      className="ai ai-CodepenFill"
     >
       <path
         fillRule="evenodd"

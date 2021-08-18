@@ -15,7 +15,7 @@ const Hashtag = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Hashtag"
+      className="ai ai-Hashtag"
     >
       <path d="M10 3L6 21"></path>
       <path d="M18 3l-4 18"></path>

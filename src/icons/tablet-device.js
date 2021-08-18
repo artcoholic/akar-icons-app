@@ -15,7 +15,7 @@ const TabletDevice = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-TabletDevice"
+      className="ai ai-TabletDevice"
     >
       <rect x="4" y="2" width="16" height="20" rx="2"></rect>
       <path d="M11 18h2"></path>

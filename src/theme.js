@@ -73,4 +73,10 @@ export const GlobalStyles = createGlobalStyle`
       box-shadow: none;
     }
   }
+
+  .ai {
+    path, rect, circle, ellipse {
+      vector-effect: non-scaling-stroke;
+    }
+  }
 `

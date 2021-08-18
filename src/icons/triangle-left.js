@@ -15,7 +15,7 @@ const TriangleLeft = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-TriangleLeft"
+      className="ai ai-TriangleLeft"
     >
       <path d="M7 12l8-6v12l-8-6z"></path>
     </svg>

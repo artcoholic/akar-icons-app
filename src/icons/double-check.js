@@ -15,7 +15,7 @@ const DoubleCheck = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-DoubleCheck"
+      className="ai ai-DoubleCheck"
     >
       <path d="M2 12l5.25 5 2.625-3"></path>
       <path d="M8 12l5.25 5L22 7"></path>

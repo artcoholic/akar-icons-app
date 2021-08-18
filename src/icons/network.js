@@ -15,7 +15,7 @@ const Network = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Network"
+      className="ai ai-Network"
     >
       <circle cx="18" cy="5" r="3"></circle>
       <circle cx="18" cy="19" r="3"></circle>

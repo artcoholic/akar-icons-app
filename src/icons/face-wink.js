@@ -15,7 +15,7 @@ const FaceWink = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-FaceWink"
+      className="ai ai-FaceWink"
     >
       <circle cx="12" cy="12" r="10"></circle>
       <path d="M7 9h2"></path>

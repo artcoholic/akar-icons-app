@@ -11,7 +11,7 @@ const ToggleOnFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-ToggleOnFill"
+      className="ai ai-ToggleOnFill"
     >
       <path
         fillRule="evenodd"

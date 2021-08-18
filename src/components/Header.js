@@ -87,6 +87,9 @@ const ButtonLink = styled.a`
     margin: 0 12px;
     width: auto;
   }
+  svg {
+    stroke-width: 1.2;
+  }
 
 `
 

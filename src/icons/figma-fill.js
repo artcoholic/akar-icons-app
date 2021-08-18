@@ -11,7 +11,7 @@ const FigmaFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-FigmaFill"
+      className="ai ai-FigmaFill"
     >
       <g clipPath="url(#clip0)">
         <path

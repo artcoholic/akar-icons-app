@@ -15,7 +15,7 @@ const Globe = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Globe"
+      className="ai ai-Globe"
     >
       <circle cx="12" cy="12" r="10"></circle>
       <ellipse

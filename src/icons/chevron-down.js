@@ -15,7 +15,7 @@ const ChevronDown = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-ChevronDown"
+      className="ai ai-ChevronDown"
     >
       <path d="M4 9l8 8 8-8"></path>
     </svg>

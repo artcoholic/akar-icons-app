@@ -11,7 +11,7 @@ const ArrowForwardThickFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-ArrowForwardThickFill"
+      className="ai ai-ArrowForwardThickFill"
     >
       <path
         fillRule="evenodd"

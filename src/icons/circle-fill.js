@@ -11,7 +11,7 @@ const CircleFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-CircleFill"
+      className="ai ai-CircleFill"
     >
       <circle cx="12" cy="12" r="11"></circle>
     </svg>

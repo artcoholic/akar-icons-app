@@ -15,7 +15,7 @@ const AlignLeft = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-AlignLeft"
+      className="ai ai-AlignLeft"
     >
       <path d="M2 3v18"></path>
       <rect x="6" y="6" width="16" height="4"></rect>

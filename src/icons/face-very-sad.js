@@ -15,7 +15,7 @@ const FaceVerySad = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-FaceVerySad"
+      className="ai ai-FaceVerySad"
     >
       <circle cx="12" cy="12" r="10"></circle>
       <path d="M8 9.05v-.1"></path>

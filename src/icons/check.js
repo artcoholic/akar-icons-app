@@ -15,7 +15,7 @@ const Check = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Check"
+      className="ai ai-Check"
     >
       <path d="M4 12l6 6L20 6"></path>
     </svg>

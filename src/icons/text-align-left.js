@@ -15,7 +15,7 @@ const TextAlignLeft = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-TextAlignLeft"
+      className="ai ai-TextAlignLeft"
     >
       <path d="M3 6h18M3 12h10M3 18h15"></path>
     </svg>

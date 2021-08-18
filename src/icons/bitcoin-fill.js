@@ -11,7 +11,7 @@ const BitcoinFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-BitcoinFill"
+      className="ai ai-BitcoinFill"
     >
       <g clipPath="url(#clip0)">
         <path d="M11.385 15.275c1.111-.004 3.54-.013 3.512-1.558-.027-1.58-2.36-1.485-3.497-1.438-.127.005-.24.01-.332.011l.052 2.987c.075-.002.165-.002.265-.002z"></path>

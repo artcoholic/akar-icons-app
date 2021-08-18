@@ -15,7 +15,7 @@ const Calendar = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Calendar"
+      className="ai ai-Calendar"
     >
       <rect x="2" y="4" width="20" height="18" rx="4"></rect>
       <path d="M8 2v4"></path>

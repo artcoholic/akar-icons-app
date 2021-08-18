@@ -11,7 +11,7 @@ const CheckBoxFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-CheckBoxFill"
+      className="ai ai-CheckBoxFill"
     >
       <path
         fillRule="evenodd"

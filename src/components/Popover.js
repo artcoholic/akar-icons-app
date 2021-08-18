@@ -119,6 +119,7 @@ const CodeSnippet = styled.div`
       }
       svg {
         color: ${props => props.theme.colors.content.primary};
+        stroke-width: 1.2;
       }
       .tooltip {
         position: absolute;

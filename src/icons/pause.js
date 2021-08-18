@@ -15,7 +15,7 @@ const Pause = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Pause"
+      className="ai ai-Pause"
     >
       <path d="M7 5v14M17 5v14"></path>
     </svg>

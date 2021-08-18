@@ -11,7 +11,7 @@ const YarnFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-YarnFill"
+      className="ai ai-YarnFill"
     >
       <g clipPath="url(#clip0)">
         <path

@@ -11,7 +11,7 @@ const QuestionFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-QuestionFill"
+      className="ai ai-QuestionFill"
     >
       <path
         fillRule="evenodd"

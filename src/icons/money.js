@@ -15,7 +15,7 @@ const Money = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Money"
+      className="ai ai-Money"
     >
       <path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7z"></path>
       <circle cx="12" cy="12" r="3"></circle>

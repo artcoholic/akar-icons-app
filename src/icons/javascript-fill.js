@@ -11,7 +11,7 @@ const JavascriptFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-JavascriptFill"
+      className="ai ai-JavascriptFill"
     >
       <path
         fillRule="evenodd"

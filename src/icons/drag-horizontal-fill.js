@@ -11,7 +11,7 @@ const DragHorizontalFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-DragHorizontalFill"
+      className="ai ai-DragHorizontalFill"
     >
       <path
         fillRule="evenodd"

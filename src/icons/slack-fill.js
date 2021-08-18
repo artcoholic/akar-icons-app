@@ -11,7 +11,7 @@ const SlackFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-SlackFill"
+      className="ai ai-SlackFill"
     >
       <path
         fillRule="evenodd"

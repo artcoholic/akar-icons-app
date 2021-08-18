@@ -15,7 +15,7 @@ const BatteryCharging = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-BatteryCharging"
+      className="ai ai-BatteryCharging"
     >
       <rect x="2" y="6" width="18" height="12" rx="2"></rect>
       <path d="M20 10h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H20v-4z"></path>

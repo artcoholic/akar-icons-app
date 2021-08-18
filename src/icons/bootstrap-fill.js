@@ -11,7 +11,7 @@ const BootstrapFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-BootstrapFill"
+      className="ai ai-BootstrapFill"
     >
       <path
         fillRule="evenodd"

@@ -11,7 +11,7 @@ const DjangoFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-DjangoFill"
+      className="ai ai-DjangoFill"
     >
       <path
         fillRule="evenodd"

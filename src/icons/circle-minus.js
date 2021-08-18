@@ -15,7 +15,7 @@ const CircleMinus = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-CircleMinus"
+      className="ai ai-CircleMinus"
     >
       <path d="M16 12H8"></path>
       <circle cx="12" cy="12" r="10"></circle>

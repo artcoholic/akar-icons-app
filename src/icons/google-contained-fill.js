@@ -11,7 +11,7 @@ const GoogleContainedFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-GoogleContainedFill"
+      className="ai ai-GoogleContainedFill"
     >
       <path
         fillRule="evenodd"

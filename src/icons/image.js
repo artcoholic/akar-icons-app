@@ -15,7 +15,7 @@ const Image = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Image"
+      className="ai ai-Image"
     >
       <path d="M2 6a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6z"></path>
       <circle cx="8.5" cy="8.5" r="2.5"></circle>

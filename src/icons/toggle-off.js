@@ -15,7 +15,7 @@ const ToggleOff = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-ToggleOff"
+      className="ai ai-ToggleOff"
     >
       <rect x="2" y="7" width="20" height="10" rx="5"></rect>
       <circle cx="7" cy="12" r="5"></circle>

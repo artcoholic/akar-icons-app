@@ -15,7 +15,7 @@ const AlignTop = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-AlignTop"
+      className="ai ai-AlignTop"
     >
       <path d="M21 2H3"></path>
       <path d="M6 22V6h4v16H6z"></path>

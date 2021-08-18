@@ -11,7 +11,7 @@ const CircleXFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-CircleXFill"
+      className="ai ai-CircleXFill"
     >
       <path
         fillRule="evenodd"

@@ -11,7 +11,7 @@ const GraphqlFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-GraphqlFill"
+      className="ai ai-GraphqlFill"
     >
       <g clipPath="url(#clip0)">
         <path

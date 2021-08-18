@@ -44,10 +44,10 @@ const IconWrapper = ({ children, icon, setOpen, setName, setCopiedSVG, addSpace 
     return () => clearTimeout(timeout);
   }, [setCopiedSVG]);
 
-  const handleClick = (i) => {
+  const handleClick = (i, e) => {
     setOpen(true);
     setName(i);
-    const svg = document.querySelector(`.ai-${i}`);
+    const svg = e.currentTarget.querySelector(`.ai-${i}`);
     console.log(svg);
     const s = new XMLSerializer();
     const str = s.serializeToString(svg);
@@ -60,7 +60,7 @@ const IconWrapper = ({ children, icon, setOpen, setName, setCopiedSVG, addSpace 
     setCopiedSVG(true);
   }
   return (
-    <Wrapper onClick={() => { handleClick(icon) }}>
+    <Wrapper onClick={(e) => { handleClick(icon, e) }}>
       {children}
       <span>{addSpace(icon)}</span>
     </Wrapper>

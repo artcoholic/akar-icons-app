@@ -15,7 +15,7 @@ const RockOn = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-RockOn"
+      className="ai ai-RockOn"
     >
       <path d="M19 16l.87-11.735a2.102 2.102 0 0 0-4.181-.433L15 9"></path>
       <path d="M8 11l-.713-4.279a2.06 2.06 0 0 0-4.083.525L4 16"></path>

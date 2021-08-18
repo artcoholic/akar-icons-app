@@ -15,7 +15,7 @@ const Glasses = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Glasses"
+      className="ai ai-Glasses"
     >
       <circle cx="6" cy="14" r="4"></circle>
       <circle cx="18" cy="14" r="4"></circle>

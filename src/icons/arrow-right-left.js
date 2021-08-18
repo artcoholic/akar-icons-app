@@ -15,7 +15,7 @@ const ArrowRightLeft = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-ArrowRightLeft"
+      className="ai ai-ArrowRightLeft"
     >
       <path d="M21 6H3m18 0l-4 4m4-4l-4-4"></path>
       <path d="M3 18h18M3 18l4 4m-4-4l4-4"></path>

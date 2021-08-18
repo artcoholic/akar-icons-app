@@ -11,7 +11,7 @@ const PentagonFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-PentagonFill"
+      className="ai ai-PentagonFill"
     >
       <path
         fillRule="evenodd"

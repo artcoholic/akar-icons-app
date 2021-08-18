@@ -15,7 +15,7 @@ const Clock = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Clock"
+      className="ai ai-Clock"
     >
       <circle cx="12" cy="12" r="10"></circle>
       <path d="M15 16l-2.414-2.414A2 2 0 0 1 12 12.172V6"></path>

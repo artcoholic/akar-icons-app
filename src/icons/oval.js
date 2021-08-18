@@ -15,7 +15,7 @@ const Oval = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Oval"
+      className="ai ai-Oval"
     >
       <ellipse cx="12" cy="12" rx="8" ry="10"></ellipse>
     </svg>

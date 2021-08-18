@@ -15,7 +15,7 @@ const Jar = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Jar"
+      className="ai ai-Jar"
     >
       <path d="M3 9l1.164 8.926a3.875 3.875 0 0 0 2.844 3.243v0c3.27.872 6.713.872 9.984 0v0a3.875 3.875 0 0 0 2.844-3.243L21 9"></path>
       <path d="M5.035 7.266C3.763 7.661 3 8.165 3 8.714 3 9.977 7.03 11 12 11s9-1.023 9-2.286c0-.55-.764-1.054-2.037-1.448"></path>

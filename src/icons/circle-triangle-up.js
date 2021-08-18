@@ -15,7 +15,7 @@ const CircleTriangleUp = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-CircleTriangleUp"
+      className="ai ai-CircleTriangleUp"
     >
       <circle cx="12" cy="12" r="10"></circle>
       <path d="M12 8l-4 6h8l-4-6z"></path>

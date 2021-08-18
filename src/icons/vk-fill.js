@@ -11,7 +11,7 @@ const VkFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-VkFill"
+      className="ai ai-VkFill"
     >
       <path
         fillRule="evenodd"

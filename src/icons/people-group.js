@@ -15,7 +15,7 @@ const PeopleGroup = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-PeopleGroup"
+      className="ai ai-PeopleGroup"
     >
       <path d="M16.719 19.752l-.64-5.124A3 3 0 0 0 13.101 12h-2.204a3 3 0 0 0-2.976 2.628l-.641 5.124A2 2 0 0 0 9.266 22h5.468a2 2 0 0 0 1.985-2.248z"></path>
       <circle cx="12" cy="5" r="3"></circle>

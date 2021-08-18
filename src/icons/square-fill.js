@@ -11,7 +11,7 @@ const SquareFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-SquareFill"
+      className="ai ai-SquareFill"
     >
       <rect x="2" y="2" width="20" height="20" rx="2"></rect>
     </svg>

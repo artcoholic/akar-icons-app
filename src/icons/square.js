@@ -15,7 +15,7 @@ const Square = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Square"
+      className="ai ai-Square"
     >
       <rect x="3" y="3" width="18" height="18" rx="2"></rect>
     </svg>

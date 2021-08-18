@@ -45,6 +45,7 @@ const MadeByContainer = styled.div`
 
 const style = {
   marginRight: 4,
+  strokeWidth: 1.2,
 }
 
 const Footer = ({ icons }) => (

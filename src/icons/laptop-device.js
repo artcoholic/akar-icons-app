@@ -15,7 +15,7 @@ const LaptopDevice = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-LaptopDevice"
+      className="ai ai-LaptopDevice"
     >
       <path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9H4V7z"></path>
       <path d="M2 19h20"></path>

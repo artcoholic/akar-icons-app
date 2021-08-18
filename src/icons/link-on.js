@@ -15,7 +15,7 @@ const LinkOn = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-LinkOn"
+      className="ai ai-LinkOn"
     >
       <path d="M9 12h6"></path>
       <path d="M15 6h1a6 6 0 0 1 0 12h-1"></path>

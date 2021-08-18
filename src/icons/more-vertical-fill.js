@@ -11,7 +11,7 @@ const MoreVerticalFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-MoreVerticalFill"
+      className="ai ai-MoreVerticalFill"
     >
       <path
         fillRule="evenodd"

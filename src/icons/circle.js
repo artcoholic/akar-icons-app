@@ -15,7 +15,7 @@ const Circle = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Circle"
+      className="ai ai-Circle"
     >
       <circle cx="12" cy="12" r="10"></circle>
     </svg>

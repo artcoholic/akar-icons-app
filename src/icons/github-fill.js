@@ -11,7 +11,7 @@ const GithubFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-GithubFill"
+      className="ai ai-GithubFill"
     >
       <path
         fillRule="evenodd"

@@ -15,7 +15,7 @@ const Rss = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Rss"
+      className="ai ai-Rss"
     >
       <path d="M4 10.418c6.068-.319 9.9 3.514 9.582 9.582"></path>
       <circle cx="5" cy="19" r="1"></circle>

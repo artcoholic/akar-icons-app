@@ -11,7 +11,7 @@ const ZoomFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-ZoomFill"
+      className="ai ai-ZoomFill"
     >
       <path
         fillRule="evenodd"

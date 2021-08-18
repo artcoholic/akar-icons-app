@@ -15,7 +15,7 @@ const Info = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Info"
+      className="ai ai-Info"
     >
       <circle cx="12" cy="12" r="10"></circle>
       <path d="M12 7h.01"></path>

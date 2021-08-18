@@ -15,7 +15,7 @@ const TwoLineVertical = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-TwoLineVertical"
+      className="ai ai-TwoLineVertical"
     >
       <path d="M15 19V5M9 19V5"></path>
     </svg>

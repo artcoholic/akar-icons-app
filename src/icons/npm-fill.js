@@ -11,7 +11,7 @@ const NpmFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-NpmFill"
+      className="ai ai-NpmFill"
     >
       <path
         fillRule="evenodd"

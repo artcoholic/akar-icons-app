@@ -15,7 +15,7 @@ const ArrowUp = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-ArrowUp"
+      className="ai ai-ArrowUp"
     >
       <path d="M12 20V4"></path>
       <path d="M5 11l7-7 7 7"></path>

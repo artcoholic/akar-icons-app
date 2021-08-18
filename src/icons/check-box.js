@@ -15,7 +15,7 @@ const CheckBox = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-CheckBox"
+      className="ai ai-CheckBox"
     >
       <rect x="3" y="3" width="18" height="18" rx="4"></rect>
       <path d="M9 12l2.25 2L15 10"></path>

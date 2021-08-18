@@ -11,7 +11,7 @@ const MoreHorizontalFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-MoreHorizontalFill"
+      className="ai ai-MoreHorizontalFill"
     >
       <path
         fillRule="evenodd"

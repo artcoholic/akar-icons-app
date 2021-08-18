@@ -11,7 +11,7 @@ const LinkedInV1Fill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-LinkedInV1Fill"
+      className="ai ai-LinkedInV1Fill"
     >
       <path
         fillRule="evenodd"

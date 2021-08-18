@@ -11,7 +11,7 @@ const VercelFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-VercelFill"
+      className="ai ai-VercelFill"
     >
       <path d="M12 1l12 21H0L12 1z"></path>
     </svg>

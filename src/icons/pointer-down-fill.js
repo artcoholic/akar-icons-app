@@ -11,7 +11,7 @@ const PointerDownFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-PointerDownFill"
+      className="ai ai-PointerDownFill"
     >
       <path
         fillRule="evenodd"

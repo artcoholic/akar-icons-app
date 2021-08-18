@@ -11,7 +11,7 @@ const RedditFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-RedditFill"
+      className="ai ai-RedditFill"
     >
       <path
         fillRule="evenodd"

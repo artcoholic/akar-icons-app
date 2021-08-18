@@ -15,7 +15,7 @@ const Bluetooth = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Bluetooth"
+      className="ai ai-Bluetooth"
     >
       <path d="M5 7l12 10-6 5V2l6 5L5 17"></path>
     </svg>

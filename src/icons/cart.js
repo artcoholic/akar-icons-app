@@ -15,7 +15,7 @@ const Cart = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Cart"
+      className="ai ai-Cart"
     >
       <path d="M5 7h13.79a2 2 0 0 1 1.99 2.199l-.6 6A2 2 0 0 1 18.19 17H8.64a2 2 0 0 1-1.962-1.608L5 7z"></path>
       <path d="M5 7l-.81-3.243A1 1 0 0 0 3.22 3H2"></path>

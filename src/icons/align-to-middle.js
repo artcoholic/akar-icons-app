@@ -15,7 +15,7 @@ const AlignToMiddle = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-AlignToMiddle"
+      className="ai ai-AlignToMiddle"
     >
       <path d="M21 12H3"></path>
       <path d="M12 2v6"></path>

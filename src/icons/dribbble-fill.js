@@ -11,7 +11,7 @@ const DribbbleFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-DribbbleFill"
+      className="ai ai-DribbbleFill"
     >
       <path
         fillRule="evenodd"

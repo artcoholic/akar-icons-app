@@ -15,7 +15,7 @@ const ArrowForward = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-ArrowForward"
+      className="ai ai-ArrowForward"
     >
       <path d="M16 5l5 5-5 5"></path>
       <path d="M21 10h-8C7.477 10 3 14.477 3 20v1"></path>

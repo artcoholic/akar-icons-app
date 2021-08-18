@@ -15,7 +15,7 @@ const ThreeLineHorizontal = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-ThreeLineHorizontal"
+      className="ai ai-ThreeLineHorizontal"
     >
       <path d="M5 6h14M5 12h14M5 18h14"></path>
     </svg>

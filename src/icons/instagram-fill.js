@@ -11,7 +11,7 @@ const InstagramFill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai-InstagramFill"
+      className="ai ai-InstagramFill"
     >
       <path
         fillRule="evenodd"

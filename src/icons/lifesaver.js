@@ -15,7 +15,7 @@ const Lifesaver = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-Lifesaver"
+      className="ai ai-Lifesaver"
     >
       <g clipPath="url(#clip0)">
         <circle cx="12" cy="12" r="10" transform="rotate(45 12 12)"></circle>

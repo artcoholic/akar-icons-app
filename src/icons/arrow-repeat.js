@@ -15,7 +15,7 @@ const ArrowRepeat = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-ArrowRepeat"
+      className="ai ai-ArrowRepeat"
     >
       <path d="M18 2l3 3-3 3"></path>
       <path d="M6 22l-3-3 3-3"></path>

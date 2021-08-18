@@ -15,7 +15,7 @@ const FaceNeutral = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-FaceNeutral"
+      className="ai ai-FaceNeutral"
     >
       <circle cx="12" cy="12" r="10"></circle>
       <path d="M8 9.05v-.1"></path>

@@ -15,7 +15,7 @@ const TriangleAlert = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai-TriangleAlert"
+      className="ai ai-TriangleAlert"
     >
       <path d="M12 9v5"></path>
       <path d="M12 17.5v.5"></path>

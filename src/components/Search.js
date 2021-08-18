@@ -55,6 +55,7 @@ const ClearButton = styled.button`
     display: block;
     position: relative;
     left: 0;
+    stroke-width: 2;
   }
 `
 
