@@ -174,6 +174,7 @@ const CopySVGButton = styled.button`
 const Popover = ({ open, setOpen, name, icons, size, copiedSVG, setCopiedSVG, addSpace }) => {
   const [reactSnippet, setReactSnippet] = useState(false);
   const [iconFontSnippet, setIconFontSnippet] = useState(false);
+  const dashed = str => str.replace(/[A-Z]/g, m => "-" + m.toLowerCase());
 
   useEffect(() => {
     const timeout = setTimeout(() => { setReactSnippet(false); }, 3000);
@@ -248,7 +249,7 @@ const Popover = ({ open, setOpen, name, icons, size, copiedSVG, setCopiedSVG, ad
             <CodeSnippet>
               <div className="label">HTML/CSS snippet</div>
               <div className="snippet-box">
-                <input type="text" value={`<i class="ai-${name}"></i>`} id="iconFontSnippet" readOnly />
+                <input type="text" value={`<i class="ai${dashed(name)}"></i>`} id="iconFontSnippet" readOnly />
                 <button className="copy-snippet-btn" onClick={() => copySnippet('iconFontSnippet')}>
                   <span className="tooltip" id="myTooltip">
                     {iconFontSnippet ? 'Copied!' : 'Copy snippet'}
