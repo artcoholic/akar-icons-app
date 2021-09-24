@@ -8,6 +8,7 @@
     "email": "agwibawa@gmail.com",
     "url": "https://arturowibawa.com"
   },
+  "main": "src/svg",
   "keywords": [
     "react",
     "icons",
