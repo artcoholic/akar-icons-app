@@ -1,6 +1,6 @@
 {
   "name": "akar-icons-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "https://github.com/artcoholic/akar-icons-app.git",
   "homepage": "https://akaricons.com",
   "author": {
@@ -9,6 +9,9 @@
     "url": "https://arturowibawa.com"
   },
   "main": "src/svg",
+  "files": [
+    "svg"
+  ],
   "keywords": [
     "react",
     "icons",
