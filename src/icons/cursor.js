@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Truck = (props) => {
+const Cursor = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,25 +15,21 @@ const Truck = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai ai-Truck"
+      className="ai ai-Cursor"
     >
-      <path d="M10 17h6V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a1 1 0 0 0 1 1h1"></path>
-      <path d="M22 16v-4a4 4 0 0 0-4-4h-2v9h5a1 1 0 0 0 1-1z"></path>
-      <path d="M15 17a3 3 0 1 0 6 0h-6z"></path>
-      <path d="M22 14h-2"></path>
-      <circle cx="7" cy="17" r="3"></circle>
+      <path d="M3 3l7 19 2.051-6.154a6 6 0 0 1 3.795-3.795L22 10 3 3z"></path>
     </svg>
   );
 };
 
-Truck.propTypes = {
+Cursor.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Truck.defaultProps = {
+Cursor.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
 
-export default Truck;
+export default Cursor;

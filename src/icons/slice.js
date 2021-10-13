@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Truck = (props) => {
+const Slice = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,25 +15,22 @@ const Truck = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai ai-Truck"
+      className="ai ai-Slice"
     >
-      <path d="M10 17h6V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a1 1 0 0 0 1 1h1"></path>
-      <path d="M22 16v-4a4 4 0 0 0-4-4h-2v9h5a1 1 0 0 0 1-1z"></path>
-      <path d="M15 17a3 3 0 1 0 6 0h-6z"></path>
-      <path d="M22 14h-2"></path>
-      <circle cx="7" cy="17" r="3"></circle>
+      <path d="M13 21H3l10-10v10z"></path>
+      <path d="M5 19L21 3v4l-8 8"></path>
     </svg>
   );
 };
 
-Truck.propTypes = {
+Slice.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Truck.defaultProps = {
+Slice.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
 
-export default Truck;
+export default Slice;
