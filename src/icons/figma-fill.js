@@ -13,7 +13,7 @@ const FigmaFill = (props) => {
       {...otherProps}
       className="ai ai-FigmaFill"
     >
-      <g clipPath="url(#clip0_100:5)">
+      <g clipPath="url(#clip0_100_5)">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -21,7 +21,7 @@ const FigmaFill = (props) => {
         ></path>
       </g>
       <defs>
-        <clipPath id="clip0_100:5">
+        <clipPath id="clip0_100_5">
           <rect width="24" height="24"></rect>
         </clipPath>
       </defs>
