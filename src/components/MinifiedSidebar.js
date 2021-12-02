@@ -46,7 +46,7 @@ const Toggle = styled.button`
 const Button = styled.a`
   -webkit-appearance: none;
   border: 0;
-  padding: 8px 12px;
+  padding: 8px 10px;
   border-radius: 4px;
   display: flex;
   justify-content: center;
