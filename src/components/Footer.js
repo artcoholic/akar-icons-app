@@ -27,19 +27,6 @@ const LinkWrapper = styled.a`
   }
 `
 
-const MadeByContainer = styled.div`
-  display: flex;
-  align-items: center;
-  border-top: 1px solid ${props => props.theme.colors.border};
-  padding-top: 12px;
-  margin-top: 12px;
-  @media (min-width: 768px) {
-    border: none;
-    padding: 0;
-    margin: 0;
-  }
-`
-
 const style = {
   marginRight: 4,
   strokeWidth: 1.2,

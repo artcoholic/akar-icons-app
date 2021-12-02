@@ -90,7 +90,6 @@ const App = () => {
   const [query, updateQuery] = useState('');
   const [stroke, setStroke] = useState(2);
   const [size, setSize] = useState(24);
-  const [height, setHeight] = useState(0);
   const [copiedSVG, setCopiedSVG] = useState(false);
 
   const fuseResults = fuse.search(query);
@@ -105,7 +104,6 @@ const App = () => {
         {width < breakpoint ? <MinifiedSidebar icons={icons} theme={theme} themeToggler={themeToggler} /> : <Sidebar icons={icons} theme={theme} themeToggler={themeToggler} />}
         <section style={{ flexGrow: 1 }}>
           <UtilityBar
-            height={height}
             query={query}
             updateQuery={updateQuery}
             icons={icons}

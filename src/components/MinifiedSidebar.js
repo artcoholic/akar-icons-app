@@ -42,18 +42,6 @@ const Toggle = styled.button`
   }
 `
 
-const Title = styled.h1`
-  font-weight: 900;
-  margin-bottom: .25em;
-`
-
-const Headline = styled.h2`
-  font-weight: 300;
-  margin-inline-end: 24px;
-  line-height: 1.25em;
-  margin-bottom: 48px;
-`
-
 const Button = styled.a`
   -webkit-appearance: none;
   border: 0;
@@ -67,19 +55,6 @@ const Button = styled.a`
   svg {
     stroke-width: 1.2;
     display: block;
-  }
-`
-
-const LinkWrapper = styled.a`
-  display: flex;
-  align-items: center;
-  border-radius: 4px;
-  padding: 8px 12px;
-  color: ${props => props.theme.colors.content.primary};
-  transform: rotate(-90deg);
-  &:hover {
-    text-decoration: none;
-    background: ${props => props.theme.colors.bg.tertiary};
   }
 `
 
@@ -103,12 +78,6 @@ const Sidebar = ({
             <path d="M587 381.334C573.666 408 503.426 421.334 400.333 421.334C297.24 421.334 227 408 213.666 381.334" stroke="#1B1C32" strokeWidth="40" strokeLinejoin="round" />
           </svg>
         </Logo>
-        {/* <Title>
-          Akar Icons
-        </Title>
-        <Headline>
-          Perfectly rounded icon library made for designers and developers.
-        </Headline> */}
         <Button className="button" bg="content.primary" color="content.secondary" href="https://github.com/artcoholic/akar-icons-app#readme" target="_blank" rel="noopener">
           <icons.Paper size={20} />
         </Button>
@@ -116,19 +85,9 @@ const Sidebar = ({
           <icons.Coin size={20} />
         </Button>
       </div>
-      {/* <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column'
-        }}
-      > */}
-      {/* <LinkWrapper className="button" href="https://twitter.com/agwibawa" target="_blank" rel="noopener" bg="#1DA1F2">
-        Made by <icons.TwitterFill size={14} color="#1DA1F2" style={{ margin: '0 4px' }} /> agwibawa
-      </LinkWrapper> */}
       <Toggle onClick={themeToggler} aria-label="Theme Toggle">
         {theme === 'light' ? <icons.MoonFill /> : <icons.SunFill />}
       </Toggle>
-      {/* </div> */}
     </Container>
   )
 }
