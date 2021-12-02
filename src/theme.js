@@ -46,6 +46,7 @@ export const darkTheme = { ...theme, ...dark };
 export const GlobalStyles = createGlobalStyle`
   * {
     transition: background 150ms ease-out, box-shadow 150ms ease-out, transform 150ms ease-out;
+    box-sizing: border-box;
   }
 
   body {
@@ -78,5 +79,10 @@ export const GlobalStyles = createGlobalStyle`
     path, rect, circle, ellipse {
       vector-effect: non-scaling-stroke;
     }
+  }
+
+  #root {
+    display: flex;
+    flex-direction: row;
   }
 `

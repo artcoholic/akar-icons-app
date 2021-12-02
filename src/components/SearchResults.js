@@ -9,11 +9,17 @@ const Container = styled.div`
   justify-items: stretch;
   align-items: stretch;
   list-style: none;
+  width: 100%;
+  padding: 2px 16px 16px;
   @media (min-width: 768px) {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 12px;
+    padding: 2px 24px 24px;
   }
-  @media (min-width: 1152px) {
+  @media (min-width: 1440px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  @media (min-width: 1920px) {
     grid-template-columns: repeat(8, 1fr);
   }
   @media (min-width: 2560px) {

@@ -5,13 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Container = styled.div`
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 25vw;
-  min-width: 360px;
-  max-width: 480px;
-  height: 100%;
+  bottom: 0;
+  width: 100%;
   display: flex;
+  justify-content: center;
   pointer-events: none;
   z-index: 99;
   button {
@@ -61,6 +58,9 @@ const Header = styled.div`
   }
   .icon-name {
     padding: 0 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .close-btn {
     background: none;
@@ -106,22 +106,16 @@ const CodeSnippet = styled.div`
     .copy-snippet-btn {
       background: none;
       padding: 11px;
-      border-radius: 4px;
+      border-radius: 2px;
       display: flex;
       justify-content: center;
       position: relative;
-      border: 1px solid ${props => props.theme.colors.bg.tertiary};
       &:hover {
-        background-color: ${props => props.theme.colors.bg.primary};
-        border: 1px solid ${props => props.theme.colors.content.tertiary};
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: ${props => props.theme.colors.bg.secondary};
         .tooltip {
           opacity: 1;
           transform: translateY(-8px);
         }
-      }
-      &:active {
-        box-shadow: none;
       }
       svg {
         color: ${props => props.theme.colors.content.primary};
@@ -156,7 +150,7 @@ const CodeSnippet = styled.div`
 `
 
 const CopySVGContainer = styled.div`
-  padding: 32px 16px 16px;
+  padding: 16px;
 `
 const CopySVGButton = styled.button`
   ${color}
@@ -177,7 +171,7 @@ const CopySVGButton = styled.button`
   }
 `
 
-const Popover = ({ open, setOpen, name, icons, size, stroke, copiedSVG, setCopiedSVG, addSpace }) => {
+const MinifiedPopover = ({ open, setOpen, name, icons, size, copiedSVG, setCopiedSVG, addSpace }) => {
   const [reactSnippet, setReactSnippet] = useState(false);
   const [iconFontSnippet, setIconFontSnippet] = useState(false);
   const dashed = str => str.replace(/[A-Z]/g, m => "-" + m.toLowerCase());
@@ -228,9 +222,9 @@ const Popover = ({ open, setOpen, name, icons, size, stroke, copiedSVG, setCopie
         <Container
           id="popover"
           as={motion.div}
-          initial={{ x: '-100%', opacity: 0 }}
-          animate={{ x: 0, opacity: 1, transition: { type: 'spring', stiffness: 100, damping: 16 } }}
-          exit={{ x: '-100%', opacity: 0, transition: { type: 'spring', stiffness: 100 } }}
+          initial={{ y: 24, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 24, opacity: 0, transition: { type: 'spring', stiffness: 100 } }}
         >
           <Wrapper>
             <Header>
@@ -243,7 +237,7 @@ const Popover = ({ open, setOpen, name, icons, size, stroke, copiedSVG, setCopie
             <CodeSnippet>
               <div className="label">React snippet</div>
               <div className="snippet-box">
-                <input type="text" value={`<${name} strokeWidth={${stroke}} size={${size}} />`} id="reactSnippet" readOnly />
+                <input type="text" value={`<${name} size={${size}} />`} id="reactSnippet" readOnly />
                 <button className="copy-snippet-btn" onClick={() => copySnippet('reactSnippet')}>
                   <span className="tooltip" id="myTooltip">
                     {reactSnippet ? 'Copied!' : 'Copy snippet'}
@@ -271,7 +265,7 @@ const Popover = ({ open, setOpen, name, icons, size, stroke, copiedSVG, setCopie
                 onClick={() => copySVG(name)}
                 copied={copiedSVG}
               >
-                {copiedSVG ? <icons.CircleCheckFill size={16} /> : <icons.Copy strokeWidth={1.2} size={16} />}
+                {copiedSVG ? <icons.CircleCheckFill size={16} /> : <icons.Copy size={16} />}
                 {copiedSVG ? "SVG copied to clipboard!" : "Copy SVG"}
               </CopySVGButton>
             </CopySVGContainer>
@@ -282,4 +276,4 @@ const Popover = ({ open, setOpen, name, icons, size, stroke, copiedSVG, setCopie
   )
 }
 
-export default Popover;
+export default MinifiedPopover;

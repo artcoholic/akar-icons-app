@@ -4,27 +4,19 @@ import DarkMode from './components/DarkMode';
 import { lightTheme, darkTheme, GlobalStyles } from './theme';
 import * as icons from './icons';
 
-import Header from './components/Header';
 import IconWrapper from './components/IconWrapper';
+import MinifiedPopover from './components/MinifiedPopover';
 import Popover from './components/Popover';
 import Footer from './components/Footer';
-import CustomizationBar from './components/CustomizationBar';
+import UtilityBar from './components/UtilityBar';
 import SearchResults from './components/SearchResults';
+import Sidebar from './components/Sidebar';
+import MinifiedSidebar from './components/MinifiedSidebar';
+import useViewport from './components/UseViewport';
 
 import upperCamelCase from 'uppercamelcase';
 import Fuse from 'fuse.js';
 import data from './data.json';
-
-const Container = styled.div`
-  display: grid;
-  grid-gap: 8px;
-  margin: 0;
-  padding: 16px;
-  @media (min-width: 768px) {
-    grid-gap: 12px;
-    padding: 12px 24px 24px;
-  }
-`
 
 const NoResults = styled.span`
   grid-column: 1 / -1;
@@ -88,6 +80,8 @@ const fuse = new Fuse(DATA.flat(), {
 })
 
 const App = () => {
+  const { width } = useViewport();
+  const breakpoint = 1280;
   const [theme, themeToggler, mountedComponent] = DarkMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
 
@@ -108,14 +102,9 @@ const App = () => {
     <>
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
-        <Header
-          icons={icons}
-          setHeight={setHeight}
-          theme={theme}
-          themeToggler={themeToggler}
-        />
-        <Container>
-          <CustomizationBar
+        {width < breakpoint ? <MinifiedSidebar icons={icons} theme={theme} themeToggler={themeToggler} /> : <Sidebar icons={icons} theme={theme} themeToggler={themeToggler} />}
+        <section style={{ flexGrow: 1 }}>
+          <UtilityBar
             height={height}
             query={query}
             updateQuery={updateQuery}
@@ -153,18 +142,32 @@ const App = () => {
               )
             })}
           </SearchResults>
-        </Container>
-        <Popover
-          open={open}
-          setOpen={setOpen}
-          name={name}
-          icons={icons}
-          size={size}
-          copiedSVG={copiedSVG}
-          setCopiedSVG={setCopiedSVG}
-          addSpace={addSpace}
-        />
-        <Footer icons={icons} />
+          <Footer icons={icons} />
+        </section>
+        {width < breakpoint ?
+          <MinifiedPopover
+            open={open}
+            setOpen={setOpen}
+            name={name}
+            icons={icons}
+            stroke={stroke}
+            size={size}
+            copiedSVG={copiedSVG}
+            setCopiedSVG={setCopiedSVG}
+            addSpace={addSpace}
+          /> :
+          <Popover
+            open={open}
+            setOpen={setOpen}
+            name={name}
+            icons={icons}
+            stroke={stroke}
+            size={size}
+            copiedSVG={copiedSVG}
+            setCopiedSVG={setCopiedSVG}
+            addSpace={addSpace}
+          />
+        }
       </ThemeProvider>
     </>
   )
