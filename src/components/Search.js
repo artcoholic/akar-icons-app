@@ -12,6 +12,8 @@ const Container = styled.div`
   flex-basis: 0;
   @media (min-width: 768px) {
     flex-basis: 100%;
+  }
+  @media (min-width: 1280px) {
     margin-right: 12px;
   }
 `
@@ -82,7 +84,7 @@ const ForwardSlash = styled.span`
   visibility: hidden;
   box-shadow: rgba(15,23,32,0.1) 0px 2px 4px 0px;
   transition: ${props => props.theme.transition};
-  @media (min-width: 768px) {
+  @media (min-width: 1280px) {
     visibility: visible;
   }
 `

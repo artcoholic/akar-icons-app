@@ -3,17 +3,14 @@ import styled from 'styled-components';
 
 const Container = styled.footer`
   display: flex;
-  justify-content: space-between;
-  padding: 12px;
-  border-top: 1px solid ${props => props.theme.colors.border};
+  padding: 16px;
+  border-top: 1px solid ${props => props.theme.colors.bg.secondary};
   font-size: .875em;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: flex-start;
   a {
     color: ${props => props.theme.colors.content.primary};
-  }
-  @media (min-width: 768px) {
-    padding: 12px 16px;
-    flex-flow: row wrap;
   }
 `
 
@@ -50,16 +47,9 @@ const style = {
 
 const Footer = ({ icons }) => (
   <Container>
-    <div style={{ display: 'flex', flexFlow: 'row wrap' }}>
-      <LinkWrapper className="button" href="https://github.com/artcoholic/akar-icons/issues/new?assignees=artcoholic&labels=enhancement&template=icon-request.md&title=%5BICON+REQUEST%5D" target="_blank" rel="noopener"><icons.File size={14} style={style} /> Request an icon</LinkWrapper>
-      <LinkWrapper className="button" href="https://github.com/artcoholic/akar-icons/issues/new?assignees=artcoholic&labels=bug&template=bug_report.md&title=%5BBUG%5D" target="_blank" rel="noopener"><icons.Bug size={14} style={style} /> Report a bug</LinkWrapper>
-      <LinkWrapper className="button" href="https://paypal.me/awibawa/5" target="_blank" rel="noopener"><icons.Coin size={14} style={style} /> Donate</LinkWrapper>
-    </div>
-    <MadeByContainer>
-      <LinkWrapper className="button" href="https://twitter.com/agwibawa" target="_blank" rel="noopener" bg="#1DA1F2">
-        Made by <icons.TwitterFill size={14} color="#1DA1F2" style={{ margin: '0 4px' }} /> agwibawa
-      </LinkWrapper>
-    </MadeByContainer>
+    <LinkWrapper className="button" href="https://github.com/artcoholic/akar-icons/issues/new?assignees=artcoholic&labels=enhancement&template=icon-request.md&title=%5BICON+REQUEST%5D" target="_blank" rel="noopener"><icons.File size={14} style={style} /> Request an icon</LinkWrapper>
+    <LinkWrapper className="button" href="https://github.com/artcoholic/akar-icons/issues/new?assignees=artcoholic&labels=bug&template=bug_report.md&title=%5BBUG%5D" target="_blank" rel="noopener"><icons.Bug size={14} style={style} /> Report a bug</LinkWrapper>
+    <LinkWrapper className="button" href="https://paypal.me/awibawa/5" target="_blank" rel="noopener"><icons.Coin size={14} style={style} /> Donate</LinkWrapper>
   </Container>
 )
 

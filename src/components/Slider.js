@@ -61,8 +61,16 @@ const Slider = ({ title, input, output, min, max, step, mr, ml, type }) => {
   }
   return (
     <Container mr={mr} ml={ml}>
-      <label htmlFor={type}><span>{title}</span><span>{output}px</span></label>
-      <input id={type} type="range" min={min} max={max} step={step} value={output} onChange={handleChange} />
+      <label htmlFor={type}><span style={{ textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden', }}>{title}</span><span>{output}px</span></label>
+      <input
+        id={type}
+        type="range"
+        min={min}
+        max={max}
+        step={step}
+        value={output}
+        onChange={handleChange}
+      />
     </Container>
   )
 }

@@ -8,30 +8,28 @@ const Container = styled.form`
   grid-column: 1 / -1;
   margin: 0;
   position: sticky;
-  top: 16px;
+  top: 0px;
   background: ${props => props.theme.colors.bg.primary};
-  border-radius: 8px;
-  padding: ${({ isStuck }) => isStuck ? '16px' : '8px 0 16px 0'};
-  box-sizing: border-box;
+  padding: 16px;
   box-shadow: ${({ isStuck }) => isStuck ? 'rgba(15,23,32,0.1) 0px 6px 12px 0px' : 'none'};
-  border: ${({ isStuck }) => isStuck ? '.5px solid' : 'none'};
-  border-color: ${props => props.theme.colors.content.tertiary};
-  z-index: 99;
+  z-index: 98;
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
-  transition: padding 150ms ease-out;
+  transition: box-shadow 150ms ease-out;
   @media (min-width: 768px) {
     flex-flow: row nowrap;
-    top: 24px;
-    padding: ${({ isStuck }) => isStuck ? '16px' : '16px 0'};
+    padding: 24px;
   }
 `
 
 const Wrapper = styled.div`
-  display: flex;
+  display: none;
   flex-flow: row nowrap;
   flex-basis: 100%;
+  @media (min-width: 1280px) {
+    display: flex;
+  }
 `
 
 const ResetButton = styled.button`
@@ -44,6 +42,7 @@ const ResetButton = styled.button`
   order: -1;
   padding: 0 16px;
   margin-left: 8px;
+  display: none;
   &:enabled:hover {
     background-color: #e8c031;
   }
@@ -55,14 +54,17 @@ const ResetButton = styled.button`
     order: 0;
     margin-left: 12px;
   }
+  @media (min-width: 1280px) {
+    display: block;
+  }
 `
 
-const CustomizationBar = ({ stroke, setStroke, size, setSize, query, updateQuery, icons, height }) => {
+const UtilityBar = ({ stroke, setStroke, size, setSize, query, updateQuery, icons }) => {
   const [isStuck, setIsStuck] = useState(false);
   const isEnabled = query !== '' || stroke !== 2 || size !== 24;
 
   useScrollPosition(({ currPos }) => {
-    setIsStuck(currPos.y < -height);
+    setIsStuck(currPos.y < 0);
   })
 
   function handleReset() {
@@ -105,4 +107,4 @@ const CustomizationBar = ({ stroke, setStroke, size, setSize, query, updateQuery
   )
 }
 
-export default CustomizationBar;
+export default UtilityBar;
