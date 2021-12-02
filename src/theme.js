@@ -83,6 +83,9 @@ export const GlobalStyles = createGlobalStyle`
 
   #root {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    @media (min-width: 1280px) {
+      flex-direction: row;
+    }
   }
 `
