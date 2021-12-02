@@ -78,7 +78,6 @@
     "gh-pages": "^3.2.3",
     "got": "^11.8.2",
     "p-queue": "^7.1.0",
-    "prettier-eslint": "^8.2.2",
     "svgo": "^2.8.0",
     "uppercamelcase": "^3.0.0"
   }
