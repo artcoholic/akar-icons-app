@@ -37,7 +37,7 @@ const Wrapper = styled.button`
   }
 `
 
-const IconWrapper = ({ children, icon, setOpen, setName, setCopiedSVG, addSpace }) => {
+const IconWrapper = ({ children, icon, setOpen, setName, setCopiedSVG, addSpace, amplitude }) => {
 
   useEffect(() => {
     const timeout = setTimeout(() => { setCopiedSVG(false); }, 3000);
@@ -58,6 +58,9 @@ const IconWrapper = ({ children, icon, setOpen, setName, setCopiedSVG, addSpace 
     document.execCommand("copy");
     document.body.removeChild(el);
     setCopiedSVG(true);
+    amplitude.getInstance().logEvent("Icon Clicked", {
+      "name": i,
+    });
   }
   return (
     <Wrapper onClick={(e) => { handleClick(icon, e) }}>

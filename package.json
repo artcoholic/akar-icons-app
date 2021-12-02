@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^2.0.3",
+    "amplitude-js": "^8.13.0",
     "framer-motion": "^4.1.17",
     "fuse.js": "^6.4.6",
     "normalize.css": "^8.0.1",
@@ -78,6 +79,7 @@
     "gh-pages": "^3.2.3",
     "got": "^11.8.2",
     "p-queue": "^7.1.0",
+    "prettier-eslint": "^8.2.2",
     "svgo": "^2.8.0",
     "uppercamelcase": "^3.0.0"
   }

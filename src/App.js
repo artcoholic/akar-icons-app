@@ -12,11 +12,12 @@ import UtilityBar from './components/UtilityBar';
 import SearchResults from './components/SearchResults';
 import Sidebar from './components/Sidebar';
 import MinifiedSidebar from './components/MinifiedSidebar';
-import useViewport from './components/UseViewport';
+import useViewport from './utilities/useViewport';
 
 import upperCamelCase from 'uppercamelcase';
 import Fuse from 'fuse.js';
 import data from './data.json';
+import { amplitude } from './utilities/amplitude';
 
 const NoResults = styled.span`
   grid-column: 1 / -1;
@@ -101,7 +102,7 @@ const App = () => {
     <>
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
-        {width < breakpoint ? <MinifiedSidebar icons={icons} theme={theme} themeToggler={themeToggler} /> : <Sidebar icons={icons} theme={theme} themeToggler={themeToggler} />}
+        {width < breakpoint ? <MinifiedSidebar icons={icons} theme={theme} themeToggler={themeToggler} /> : <Sidebar icons={icons} theme={theme} themeToggler={themeToggler} amplitude={amplitude} />}
         <section style={{ flexGrow: 1 }}>
           <UtilityBar
             query={query}
@@ -132,6 +133,7 @@ const App = () => {
                   copiedSVG={copiedSVG}
                   setCopiedSVG={setCopiedSVG}
                   addSpace={addSpace}
+                  amplitude={amplitude}
                 >
                   <IconContainer>
                     <Icon strokeWidth={stroke} size={size} />

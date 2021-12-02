@@ -120,8 +120,12 @@ const LinkWrapper = styled.a`
 const Sidebar = ({
   icons,
   theme,
-  themeToggler
+  themeToggler,
+  amplitude
 }) => {
+  const logClick = () => {
+    amplitude.getInstance().logEvent("getStartedButtonClicked");
+  }
   return (
     <Container>
       <div>
@@ -143,7 +147,7 @@ const Sidebar = ({
         <Headline>
           Perfectly rounded icon library made for designers and developers.
         </Headline>
-        <Button className="button" bg="content.primary" color="content.secondary" href="https://github.com/artcoholic/akar-icons-app#readme" target="_blank" rel="noopener">
+        <Button className="button" bg="content.primary" color="content.secondary" href="https://github.com/artcoholic/akar-icons-app#readme" target="_blank" rel="noopener" onClick={logClick}>
           <icons.Paper size={16} style={{ marginRight: 8 }} />
           <span name="Get started">Get started</span>
           <icons.ArrowUpRight size={16} style={{ marginLeft: 8 }} />
