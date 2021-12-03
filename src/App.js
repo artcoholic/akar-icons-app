@@ -102,7 +102,7 @@ const App = () => {
     <>
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
-        {width < breakpoint ? <MinifiedSidebar icons={icons} theme={theme} themeToggler={themeToggler} /> : <Sidebar icons={icons} theme={theme} themeToggler={themeToggler} amplitude={amplitude} />}
+        {width < breakpoint ? <MinifiedSidebar icons={icons} theme={theme} themeToggler={themeToggler} amplitude={amplitude} /> : <Sidebar icons={icons} theme={theme} themeToggler={themeToggler} amplitude={amplitude} />}
         <section style={{ flexGrow: 1 }}>
           <UtilityBar
             query={query}
@@ -155,6 +155,7 @@ const App = () => {
             copiedSVG={copiedSVG}
             setCopiedSVG={setCopiedSVG}
             addSpace={addSpace}
+            amplitude={amplitude}
           /> :
           <Popover
             open={open}

@@ -63,8 +63,12 @@ const Button = styled.a`
 const Sidebar = ({
   icons,
   theme,
-  themeToggler
+  themeToggler,
+  amplitude
 }) => {
+  const logClick = () => {
+    amplitude.getInstance().logEvent("getStartedButtonClicked");
+  }
   return (
     <Container>
       <Logo>
@@ -79,7 +83,7 @@ const Sidebar = ({
           <path d="M587 381.334C573.666 408 503.426 421.334 400.333 421.334C297.24 421.334 227 408 213.666 381.334" stroke="#1B1C32" strokeWidth="40" strokeLinejoin="round" />
         </svg>
       </Logo>
-      <Button className="button" bg="content.primary" color="content.secondary" href="https://github.com/artcoholic/akar-icons-app#readme" target="_blank" rel="noopener">
+      <Button className="button" bg="content.primary" color="content.secondary" href="https://github.com/artcoholic/akar-icons-app#readme" target="_blank" rel="noopener" onClick={logClick}>
         <icons.Paper size={16} /> Get started
       </Button>
       <Toggle onClick={themeToggler} aria-label="Theme Toggle">
