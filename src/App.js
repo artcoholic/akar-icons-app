@@ -166,6 +166,7 @@ const App = () => {
             copiedSVG={copiedSVG}
             setCopiedSVG={setCopiedSVG}
             addSpace={addSpace}
+            amplitude={amplitude}
           />
         }
       </ThemeProvider>

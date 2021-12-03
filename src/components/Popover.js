@@ -177,7 +177,7 @@ const CopySVGButton = styled.button`
   }
 `
 
-const Popover = ({ open, setOpen, name, icons, size, stroke, copiedSVG, setCopiedSVG, addSpace }) => {
+const Popover = ({ open, setOpen, name, icons, size, stroke, copiedSVG, setCopiedSVG, addSpace, amplitude }) => {
   const [reactSnippet, setReactSnippet] = useState(false);
   const [iconFontSnippet, setIconFontSnippet] = useState(false);
   const dashed = str => str.replace(/[A-Z]/g, m => "-" + m.toLowerCase());
@@ -217,8 +217,16 @@ const Popover = ({ open, setOpen, name, icons, size, stroke, copiedSVG, setCopie
     document.execCommand("copy");
     if (type === 'reactSnippet') {
       setReactSnippet(true);
+      amplitude.getInstance().logEvent("copySnippetButtonClicked", {
+        "name": name,
+        "type": "reactSnippet"
+      });
     } else {
       setIconFontSnippet(true);
+      amplitude.getInstance().logEvent("copySnippetButtonClicked", {
+        "name": name,
+        "type": "iconFontSnippet"
+      });
     }
   }
 
