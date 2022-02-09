@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const LinkedinV2Fill = (props) => {
+const LinkedinFill = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -11,7 +11,7 @@ const LinkedinV2Fill = (props) => {
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
-      className="ai ai-LinkedinV2Fill"
+      className="ai ai-LinkedinFill"
     >
       <path
         fillRule="evenodd"
@@ -22,14 +22,14 @@ const LinkedinV2Fill = (props) => {
   );
 };
 
-LinkedinV2Fill.propTypes = {
+LinkedinFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-LinkedinV2Fill.defaultProps = {
+LinkedinFill.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
 
-export default LinkedinV2Fill;
+export default LinkedinFill;
