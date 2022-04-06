@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = (props) => {
+const BookClose = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,22 +15,21 @@ const Book = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai ai-Book"
+      className="ai ai-BookClose"
     >
-      <path d="M2 6s1.5-2 5-2 5 2 5 2v14s-1.5-1-5-1-5 1-5 1V6z"></path>
-      <path d="M12 6s1.5-2 5-2 5 2 5 2v14s-1.5-1-5-1-5 1-5 1V6z"></path>
+      <path d="M4 4.222v15.556C4 21.005 5.023 22 6.286 22h11.428C18.977 22 20 21.005 20 19.778V8.444a2 2 0 0 0-2-2H6.286C5.023 6.444 4 5.45 4 4.222zm0 0C4 2.995 5.023 2 6.286 2h9.143c1.262 0 2.285.995 2.285 2.222v2.222"></path>
     </svg>
   );
 };
 
-Book.propTypes = {
+BookClose.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Book.defaultProps = {
+BookClose.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
 
-export default Book;
+export default BookClose;
