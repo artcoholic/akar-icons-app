@@ -34,7 +34,7 @@ const Wrapper = styled.div`
 
 const ResetButton = styled.button`
   --active-bg: ${props => props.theme.colors.tertiary};
-  --active-color: ${props => props.theme.colors.secondary};
+  --active-color: ${props => props.theme.colors.primary};
   border: none;
   font-size: 12px;
   border-radius: 4px;
@@ -48,6 +48,7 @@ const ResetButton = styled.button`
   border: none;
   &:enabled:hover {
     background-color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.secondary};
   }
   svg {
     display: block;
@@ -64,7 +65,7 @@ const ResetButton = styled.button`
 
 const UtilityBar = ({ stroke, setStroke, size, setSize, query, updateQuery, icons }) => {
   const [isStuck, setIsStuck] = useState(false);
-  const isEnabled = query !== '' || stroke !== 2 || size !== 24;
+  const isEnabled = query !== '' || stroke !== 2 || size !== 36;
 
   useScrollPosition(({ currPos }) => {
     setIsStuck(currPos.y < 0);
@@ -72,7 +73,7 @@ const UtilityBar = ({ stroke, setStroke, size, setSize, query, updateQuery, icon
 
   function handleReset() {
     setStroke(2);
-    setSize(24);
+    setSize(36);
     updateQuery('');
   }
 

@@ -80,7 +80,17 @@ const CodeSnippet = styled.div`
   padding: 16px 16px 0;
   .label {
     font-size: 14px;
-    margin-bottom: .5em;
+    padding-bottom: .5em;
+    color: ${props => props.theme.colors.primary};
+    text-decoration: underline dotted;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
   .snippet-box {
     background-color: ${props => props.theme.colors.tertiary};
@@ -100,7 +110,7 @@ const CodeSnippet = styled.div`
       outline: none;
       font-family: monospace;
       width: 100%;
-      color: ${props => props.theme.colors.secondary};;
+      color: ${props => props.theme.colors.primary};;
     }
     .copy-snippet-btn {
       background: none;
@@ -120,7 +130,7 @@ const CodeSnippet = styled.div`
       }
       }
       svg {
-        color: ${props => props.theme.colors.secondary};
+        color: ${props => props.theme.colors.primary};
         stroke-width: 1.2;
       }
       .tooltip {
@@ -242,7 +252,7 @@ const MinifiedPopover = ({ open, setOpen, name, icons, size, copiedSVG, setCopie
               <button className="close-btn" onClick={() => setOpen(false)}><icons.Cross size={16} /></button>
             </Header>
             <CodeSnippet>
-              <div className="label">React snippet</div>
+              <a aria-label="react snippet" href="https://github.com/artcoholic/akar-icons" className='label' target="_blank">React snippet <icons.BookOpen size={14} strokeWidth={1} /></a>
               <div className="snippet-box">
                 <input type="text" value={`<${name} size={${size}} />`} id="reactSnippet" readOnly />
                 <button className="copy-snippet-btn" onClick={() => copySnippet('reactSnippet')}>
@@ -254,7 +264,7 @@ const MinifiedPopover = ({ open, setOpen, name, icons, size, copiedSVG, setCopie
               </div>
             </CodeSnippet>
             <CodeSnippet>
-              <div className="label">HTML/CSS snippet</div>
+              <a aria-label="html/css snippet" href="https://github.com/artcoholic/akar-icons-fonts" className="label" target="_blank">HTML/CSS snippet <icons.BookOpen size={14} strokeWidth={1} /></a>
               <div className="snippet-box">
                 <input type="text" value={`<i class="ai${dashed(name)}"></i>`} id="iconFontSnippet" readOnly />
                 <button className="copy-snippet-btn" onClick={() => copySnippet('iconFontSnippet')}>

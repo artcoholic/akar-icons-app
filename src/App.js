@@ -53,12 +53,13 @@ const SecondaryLinks = styled.a`
   display: flex;
   align-items: center;
   background: ${props => props.theme.colors.tertiary};
-  color: ${props => props.theme.colors.secondary};
+  color: ${props => props.theme.colors.primary};
   padding: 8px 12px;
   border-radius: 4px;
   font-size: 14px;
   &:hover {
     background: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.secondary};
   }
   svg {
     margin-right: 4px;
@@ -90,7 +91,7 @@ const App = () => {
   const [name, setName] = useState();
   const [query, updateQuery] = useState('');
   const [stroke, setStroke] = useState(2);
-  const [size, setSize] = useState(24);
+  const [size, setSize] = useState(36);
   const [copiedSVG, setCopiedSVG] = useState(false);
 
   const fuseResults = fuse.search(query);

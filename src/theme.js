@@ -2,9 +2,9 @@ import { createGlobalStyle } from 'styled-components';
 
 const light = {
   colors: {
-    primary: '#12132B',
-    secondary: '#FBFBFF',
-    tertiary: '#0F90FA',
+    primary: '#10284B',
+    secondary: '#F6F6EB',
+    tertiary: '#4CAEFF',
     boxShadow: 'rgba(15,23,32,0.15)',
     pattern: '#e2e2e2',
   }
@@ -12,9 +12,9 @@ const light = {
 
 const gray = {
   colors: {
-    primary: '#423E37',
+    primary: '#35322C',
     secondary: '#EDEBD7',
-    tertiary: '#DD9F0F',
+    tertiary: '#FFB224',
     boxShadow: 'rgba(15,23,32,0.15)',
     pattern: '#f6f6f6',
   }
@@ -22,11 +22,11 @@ const gray = {
 
 const dark = {
   colors: {
-    primary: '#3A5E39',
-    secondary: '#CCDEAB',
-    tertiary: '#4E804D',
+    primary: '#2A4729',
+    secondary: '#F7FECD',
+    tertiary: '#CCDEAB',
     boxShadow: 'rgba(15,23,32,0)',
-    pattern: '#f2f2f2',
+    pattern: '#e2e2e2',
   }
 }
 

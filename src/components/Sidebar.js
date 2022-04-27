@@ -38,10 +38,10 @@ const Toggle = styled.button`
   cursor: pointer;
   svg {
     display: block;
-    fill: ${props => props.theme.colors.secondary};
+    fill: ${props => props.theme.colors.primary};
   }
   &:hover {
-    background-color: ${props => props.theme.colors.primary};
+    background-color: ${props => props.theme.colors.secondary};
   }
 `
 

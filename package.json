@@ -1,6 +1,6 @@
 {
   "name": "akar-icons-app",
-  "version": "2.0.9",
+  "version": "2.1.0",
   "repository": "https://github.com/artcoholic/akar-icons-app.git",
   "homepage": "https://akaricons.com",
   "author": {
@@ -74,6 +74,7 @@
     "@testing-library/user-event": "^13.2.1",
     "cheerio": "^1.0.0-rc.10",
     "dotenv": "^8.2.0",
+    "eslint": "^7.32.0",
     "eslint-config-react-app": "^6.0.0",
     "figma-js": "^1.14.0",
     "fs-extra": "^8.1.0",

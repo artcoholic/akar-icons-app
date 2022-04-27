@@ -9,9 +9,6 @@ const Container = styled.footer`
   flex-flow: row wrap;
   width: 100%;
   justify-content: flex-start;
-  a {
-    color: ${props => props.theme.colors.secondary};
-  }
 `
 
 const LinkWrapper = styled.a`
@@ -22,9 +19,11 @@ const LinkWrapper = styled.a`
   padding: 8px 12px;
   gap: 8px;
   background: ${props => props.theme.colors.tertiary};
+  color: ${props => props.theme.colors.primary};
   &:hover {
     text-decoration: none;
     background: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.secondary};
   }
 `
 

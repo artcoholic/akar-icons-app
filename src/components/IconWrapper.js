@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.button`
@@ -16,7 +16,6 @@ const Wrapper = styled.button`
   -webkit-appearance: none;
   &:focus, &:hover {
     background: ${props => props.theme.colors.tertiary};
-    color: ${props => props.theme.colors.secondary};
     span {
       opacity: 1;
       transform: translateY(-16px);
@@ -24,6 +23,7 @@ const Wrapper = styled.button`
   }
   &:focus, &:active {
     background: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.secondary};
     outline: none;
     box-shadow: none;
   }

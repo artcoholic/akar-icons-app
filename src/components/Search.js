@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
+  --focus: ${props => props.theme.colors.secondary};
+  --default: ${props => props.theme.colors.primary};
   display: flex;
   align-items: center;
   position: relative;
@@ -26,16 +28,16 @@ const SearchInput = styled.input`
   background: ${props => props.theme.colors.tertiary};
   line-height:1.5;
   -webkit-appearance: none;
-  color: ${props => props.theme.colors.secondary};
+  color: ${props => props.theme.colors.primary};
   transition: ${props => props.theme.transition};
   &:focus, &:active {
    outline: none;
    background: ${props => props.theme.colors.primary};
+   color: ${props => props.theme.colors.secondary};
   }
   &::placeholder  {
-    color: ${props => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.primary};
     transition: ${props => props.theme.transition};
-    opacity: 0.5;
   }
 `
 
@@ -47,10 +49,11 @@ const ClearButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  color: ${props => props.theme.colors.secondary};
   border-radius: 4px;
+  color: ${props => props.focus ? 'var(--focus)' : 'var(--default)'};
   &:hover {
     background: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.secondary};
   }
   svg {
     display: block;
@@ -66,6 +69,7 @@ const SearchIcon = styled.div`
   padding: 0 14px;
   box-sizing: border-box;
   transition: ${props => props.theme.transition};
+  color: ${props => props.focus ? 'var(--focus)' : 'var(--default)'};
   svg {
     display: block;
   }
@@ -123,7 +127,7 @@ const Search = ({ query, updateQuery, icons }) => {
 
   return (
     <Container>
-      <SearchIcon><icons.Search size={20} /></SearchIcon>
+      <SearchIcon focus={focus}><icons.Search size={20} /></SearchIcon>
       <SearchInput
         ref={searchInput}
         type="text"
@@ -137,7 +141,7 @@ const Search = ({ query, updateQuery, icons }) => {
         aria-label="Search"
       />
       {query && (
-        <ClearButton aria-label="Clear search" onClick={onClear}>
+        <ClearButton aria-label="Clear search" onClick={onClear} focus={focus}>
           <icons.Cross size={14} strokeWidth={3} />
         </ClearButton>
       )}
