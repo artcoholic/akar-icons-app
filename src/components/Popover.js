@@ -259,7 +259,7 @@ const Popover = ({ open, setOpen, name, icons, size, stroke, copiedSVG, setCopie
               <button className="close-btn" onClick={() => setOpen(false)}><icons.Cross size={16} /></button>
             </Header>
             <CodeSnippet>
-              <a aria-label="react snippet" href="https://github.com/artcoholic/akar-icons" className='label' target="_blank">React snippet <icons.BookOpen size={14} strokeWidth={1} /></a>
+              <a aria-label="react snippet" href="https://github.com/artcoholic/akar-icons" className='label'>React snippet <icons.BookOpen size={14} strokeWidth={1} /></a>
               <div className="snippet-box">
                 <input type="text" value={`<${name} strokeWidth={${stroke}} size={${size}} />`} id="reactSnippet" readOnly />
                 <button className="copy-snippet-btn" onClick={() => copySnippet('reactSnippet')}>
@@ -271,7 +271,7 @@ const Popover = ({ open, setOpen, name, icons, size, stroke, copiedSVG, setCopie
               </div>
             </CodeSnippet>
             <CodeSnippet>
-              <a aria-label="html/css snippet" href="https://github.com/artcoholic/akar-icons-fonts" className="label" target="_blank">HTML/CSS snippet <icons.BookOpen size={14} strokeWidth={1} /></a>
+              <a aria-label="html/css snippet" href="https://github.com/artcoholic/akar-icons-fonts" className="label">HTML/CSS snippet <icons.BookOpen size={14} strokeWidth={1} /></a>
               <div className="snippet-box">
                 <input type="text" value={`<i class="ai${dashed(name)}"></i>`} id="iconFontSnippet" readOnly />
                 <button className="copy-snippet-btn" onClick={() => copySnippet('iconFontSnippet')}>
