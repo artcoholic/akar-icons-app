@@ -5,14 +5,14 @@ import { flexbox, space, color, layout } from 'styled-system';
 const Container = styled.header`
   display: block;
   width: 100%;
-  background: ${props => props.theme.colors.bg.primary};
+  background: ${props => props.theme.colors.primary};
   box-sizing: border-box;
   @media (min-width: 768px) {
     padding: 0px 24px;
   }
 `
 const InnerContainer = styled.div`
-  background: ${props => props.theme.colors.bg.secondary};
+  background: ${props => props.theme.colors.secondary};
   width: 100%;
   padding: 48px 24px 24px;
   box-sizing: border-box;
@@ -123,14 +123,14 @@ const Toggle = styled.button`
   padding: 6px;
   border: none;
   border-radius: 8px;
-  background-color: ${props => props.theme.colors.bg.tertiary};
+  background-color: ${props => props.theme.colors.tertiary};
   cursor: pointer;
   svg {
     display: block;
-    fill: ${props => props.theme.colors.content.primary};
+    fill: ${props => props.theme.colors.primary};
   }
   &:hover {
-    background-color: ${props => props.theme.colors.bg.primary};
+    background-color: ${props => props.theme.colors.primary};
   }
 `
 
@@ -186,10 +186,10 @@ const Header = ({
           {theme === 'light' ? <icons.MoonFill /> : <icons.SunFill />}
         </Toggle>
         <Wrapper justifyContent="center">
-          <ButtonLink className="button" bg="content.primary" color="content.secondary" href="https://github.com/artcoholic/akar-icons-app#readme" target="_blank" rel="noopener">
+          <ButtonLink className="button" bg="content.primary" color="secondary" href="https://github.com/artcoholic/akar-icons-app#readme" target="_blank" rel="noopener">
             <icons.Paper size={16} style={{ marginRight: 8 }} /> Read the docs <icons.ArrowUpRight size={16} style={{ marginLeft: 8 }} />
           </ButtonLink>
-          <ButtonLink className="button" bg="bg.primary" color="content.primary" href="https://paypal.me/awibawa/5" target="_blank" rel="noopener">
+          <ButtonLink className="button" bg="primary" color="primary" href="https://paypal.me/awibawa/5" target="_blank" rel="noopener">
             <icons.Coin size={16} style={{ marginRight: 8 }} /> Donate <icons.ArrowUpRight size={16} style={{ marginLeft: 8 }} />
           </ButtonLink>
         </Wrapper>

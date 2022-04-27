@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.button`
@@ -6,27 +6,26 @@ const Wrapper = styled.button`
   box-sizing: border-box;
   flex-direction: column;
   align-items: center;
-  background: ${props => props.theme.colors.bg.tertiary};
+  background: ${props => props.theme.colors.secondary};
   padding: 24px;
   border-radius: 4px;
   border: 0;
   cursor: pointer;
   position: relative;
-  color: ${props => props.theme.colors.content.primary};
+  color: ${props => props.theme.colors.primary};
   -webkit-appearance: none;
-  &:hover {
-    background: ${props => props.theme.colors.bg.secondary};
-  }
   &:focus, &:hover {
+    background: ${props => props.theme.colors.tertiary};
+    color: ${props => props.theme.colors.secondary};
     span {
       opacity: 1;
       transform: translateY(-16px);
     }
   }
   &:focus, &:active {
-    background: ${props => props.theme.colors.bg.primary};
+    background: ${props => props.theme.colors.primary};
     outline: none;
-    box-shadow: 0 0 0 2px ${props => props.theme.colors.content.primary};
+    box-shadow: none;
   }
   span {
     position: absolute;
@@ -34,6 +33,10 @@ const Wrapper = styled.button`
     font-size: 12px;
     opacity: 0;
     padding: 0 24px;
+  }
+  &.active {
+    background: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.secondary};
   }
 `
 
@@ -48,7 +51,6 @@ const IconWrapper = ({ children, icon, setOpen, setName, setCopiedSVG, addSpace,
     setOpen(true);
     setName(i);
     const svg = e.currentTarget.querySelector(`.ai-${i}`);
-    console.log(svg);
     const s = new XMLSerializer();
     const str = s.serializeToString(svg);
     const el = document.createElement('textarea');
@@ -61,6 +63,7 @@ const IconWrapper = ({ children, icon, setOpen, setName, setCopiedSVG, addSpace,
     amplitude.getInstance().logEvent("Icon Clicked", {
       "name": i,
     });
+    console.log(e.currentTarget);
   }
   return (
     <Wrapper onClick={(e) => { handleClick(icon, e) }}>

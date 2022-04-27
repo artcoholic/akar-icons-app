@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import DarkMode from './components/DarkMode';
-import { lightTheme, darkTheme, GlobalStyles } from './theme';
+import ThemeToggler from './utilities/themeToggler';
+import { GlobalStyles, lightTheme, darkTheme, grayTheme } from './theme';
 import * as icons from './icons';
 
 import IconWrapper from './components/IconWrapper';
@@ -23,17 +23,17 @@ const NoResults = styled.span`
   grid-column: 1 / -1;
   text-align: center;
   padding: 4em 0;
-  color: ${props => props.theme.colors.content.primary};
+  color: ${props => props.theme.colors.primary};
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column wrap;
   code {
     margin-left: 2px;
-    border-bottom: 1px dotted ${props => props.theme.colors.content.primary};
+    border-bottom: 1px dotted ${props => props.theme.colors.primary};
   }
   span:first-child {
-    color: ${props => props.theme.colors.bg.secondary};
+    color: ${props => props.theme.colors.primary};
   }
   svg {
     stroke-width: 1.2;
@@ -52,13 +52,13 @@ const IconContainer = styled.div`
 const SecondaryLinks = styled.a`
   display: flex;
   align-items: center;
-  background: ${props => props.theme.colors.bg.tertiary};
-  color: ${props => props.theme.colors.content.primary};
+  background: ${props => props.theme.colors.tertiary};
+  color: ${props => props.theme.colors.secondary};
   padding: 8px 12px;
   border-radius: 4px;
   font-size: 14px;
   &:hover {
-    background: ${props => props.theme.colors.bg.secondary};
+    background: ${props => props.theme.colors.primary};
   }
   svg {
     margin-right: 4px;
@@ -83,8 +83,8 @@ const fuse = new Fuse(DATA.flat(), {
 const App = () => {
   const { width } = useViewport();
   const breakpoint = 1280;
-  const [theme, themeToggler, mountedComponent] = DarkMode();
-  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  const [theme, toggler, mountedComponent] = ThemeToggler();
+  const themeMode = (theme === 'light') ? lightTheme : (theme === 'dark') ? darkTheme : grayTheme;
 
   const [open, setOpen] = useState(false);
   const [name, setName] = useState();
@@ -102,7 +102,11 @@ const App = () => {
     <>
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
-        {width < breakpoint ? <MinifiedSidebar icons={icons} theme={theme} themeToggler={themeToggler} amplitude={amplitude} /> : <Sidebar icons={icons} theme={theme} themeToggler={themeToggler} amplitude={amplitude} />}
+        {
+          width < breakpoint ?
+            <MinifiedSidebar icons={icons} theme={theme} toggler={toggler} amplitude={amplitude} /> :
+            <Sidebar icons={icons} theme={theme} toggler={toggler} amplitude={amplitude} />
+        }
         <section style={{ flexGrow: 1 }}>
           <UtilityBar
             query={query}
@@ -116,7 +120,7 @@ const App = () => {
           <SearchResults>
             {results.length === 0 && (
               <NoResults>
-                <span style={{ fontSize: "6em" }}>( · _ · )</span>
+                <span style={{ fontSize: "6em" }}>( T _ T )</span>
                 <span style={{ margin: "2em 0 1em 0" }}>There are no icons for <code>{query}</code></span>
                 <SecondaryLinks className="button" href="https://github.com/artcoholic/akar-icons/issues/new?assignees=artcoholic&labels=enhancement&template=icon-request.md&title=%5BICON+REQUEST%5D" target="_blank"><icons.File size={14} />Request an icon</SecondaryLinks>
               </NoResults>

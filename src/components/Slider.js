@@ -18,28 +18,29 @@ const Container = styled.div`
     justify-content: space-between;
     font-size: 14px;
     margin-bottom: 16px;
+    color: ${props => props.theme.colors.primary};
   }
-  
+
   input[type=range] {
     width: 100%;
     appearance: none;
     background: transparent;
-    
+
     &::-webkit-slider-runnable-track {
       height: 2px;
-      background: ${props => props.theme.colors.bg.secondary};
+      background: ${props => props.theme.colors.tertiary};
       border: none;
     }
     &::-webkit-slider-thumb {
       appearance: none;
       cursor: pointer;
       border: none;
-      height: 16px;
-      width: 16px;
+      height: 24px;
+      width: 24px;
       border-radius: 50%;
-      background: ${props => props.theme.colors.bg.primary};
-      border: 1px solid ${props => props.theme.colors.content.primary};
-      margin-top: -7px;
+      background: ${props => props.theme.colors.primary};
+      border: 4px solid ${props => props.theme.colors.secondary};
+      margin-top: -11px;
       transition: transform 150ms ease-out;
       &:active {
         transform: scale(1.5);

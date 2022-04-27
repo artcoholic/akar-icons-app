@@ -2,57 +2,52 @@ import { createGlobalStyle } from 'styled-components';
 
 const light = {
   colors: {
-    bg: {
-      primary: 'white',
-      secondary: '#D5F4FD',
-      tertiary: '#F1FCFF',
-      transparent: 'rgba(255, 255, 255, 0.8)',
-    },
-    content: {
-      primary: '#082D41',
-      secondary: '#D5F4FD',
-      tertiary: '#E1F0FF',
-    },
+    primary: '#12132B',
+    secondary: '#FBFBFF',
+    tertiary: '#0F90FA',
     boxShadow: 'rgba(15,23,32,0.15)',
-    border: '#F1FCFF'
+    pattern: '#e2e2e2',
+  }
+}
+
+const gray = {
+  colors: {
+    primary: '#423E37',
+    secondary: '#EDEBD7',
+    tertiary: '#DD9F0F',
+    boxShadow: 'rgba(15,23,32,0.15)',
+    pattern: '#f6f6f6',
   }
 }
 
 const dark = {
   colors: {
-    bg: {
-      primary: '#0C1820',
-      secondary: '#082636',
-      tertiary: '#071D2A',
-      transparent: 'rgba(12,24,32,0.8)',
-    },
-    content: {
-      primary: '#D5F4FD',
-      secondary: '#082636',
-      tertiary: '#102A4C',
-    },
+    primary: '#3A5E39',
+    secondary: '#CCDEAB',
+    tertiary: '#4E804D',
     boxShadow: 'rgba(15,23,32,0)',
-    border: '#082636',
+    pattern: '#f2f2f2',
   }
 }
 
-const theme = {
+export const theme = {
   breakpoints: ['768px'],
 }
 
 export const lightTheme = { ...theme, ...light };
 export const darkTheme = { ...theme, ...dark };
+export const grayTheme = { ...theme, ...gray };
 
 export const GlobalStyles = createGlobalStyle`
   * {
-    transition: background 150ms ease-out, box-shadow 150ms ease-out, transform 150ms ease-out;
+    transition: background 300ms cubic-bezier(.23,1,.32,1), box-shadow 300ms cubic-bezier(.23,1,.32,1), transform 300ms cubic-bezier(.23,1,.32,1);
     box-sizing: border-box;
   }
 
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: ${props => props.theme.colors.content.primary};
-    background: ${props => props.theme.colors.bg.primary};
+    color: ${props => props.theme.colors.primary};
+    background: ${props => props.theme.colors.secondary};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

@@ -9,7 +9,7 @@ const Container = styled.form`
   margin: 0;
   position: sticky;
   top: 0px;
-  background: ${props => props.theme.colors.bg.primary};
+  background: ${props => props.theme.colors.secondary};
   padding: 16px;
   box-shadow: ${({ isStuck }) => isStuck ? 'rgba(15,23,32,0.1) 0px 6px 12px 0px' : 'none'};
   z-index: 98;
@@ -33,18 +33,21 @@ const Wrapper = styled.div`
 `
 
 const ResetButton = styled.button`
+  --active-bg: ${props => props.theme.colors.tertiary};
+  --active-color: ${props => props.theme.colors.secondary};
   border: none;
   font-size: 12px;
   border-radius: 4px;
-  background: ${({ disabled }) => disabled ? '#F2F2F2' : '#FFD542'};
-  color: ${({ disabled }) => disabled ? '#BDBDBD' : '#082D41'};
+  background: ${({ disabled }) => disabled ? '#F2F2F2' : 'var(--active-bg)'};
+  color: ${({ disabled }) => disabled ? '#BDBDBD' : 'var(--active-color)'};
   cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
   order: -1;
   padding: 0 16px;
   margin-left: 8px;
   display: none;
+  border: none;
   &:enabled:hover {
-    background-color: #e8c031;
+    background-color: ${props => props.theme.colors.primary};
   }
   svg {
     display: block;

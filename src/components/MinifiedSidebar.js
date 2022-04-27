@@ -4,7 +4,7 @@ import { color } from 'styled-system';
 
 const Container = styled.section`
   width: 100%;
-  background: ${props => props.theme.colors.bg.secondary};
+  background: ${props => props.theme.colors.primary};
   position: sticky;
   top: 0;
   padding: 12px;
@@ -19,9 +19,6 @@ const Container = styled.section`
 
 const Logo = styled.div`
   border-radius: 8px;
-  box-shadow: rgb(45 59 66 / 0.15) 0px 6px 12px 0px;
-  border: 1px solid #d8c789;
-  background: #FFD542;
   width: 36px;
   height: 36px;
   svg {
@@ -30,16 +27,17 @@ const Logo = styled.div`
 `
 
 const Toggle = styled.button`
-  padding: 6px;
+  padding: 8px;
   border: none;
   border-radius: 4px;
-  background-color: ${props => props.theme.colors.bg.tertiary};
+  background-color: ${props => props.theme.colors.tertiary};
+  cursor: pointer;
   svg {
     display: block;
-    fill: ${props => props.theme.colors.content.primary};
+    fill: ${props => props.theme.colors.secondary};
   }
   &:hover {
-    background-color: ${props => props.theme.colors.bg.primary};
+    background-color: ${props => props.theme.colors.primary};
   }
 `
 
@@ -62,8 +60,7 @@ const Button = styled.a`
 
 const Sidebar = ({
   icons,
-  theme,
-  themeToggler,
+  toggler,
   amplitude
 }) => {
   const logClick = () => {
@@ -83,11 +80,11 @@ const Sidebar = ({
           <path d="M587 381.334C573.666 408 503.426 421.334 400.333 421.334C297.24 421.334 227 408 213.666 381.334" stroke="#1B1C32" strokeWidth="40" strokeLinejoin="round" />
         </svg>
       </Logo>
-      <Button className="button" bg="content.primary" color="content.secondary" href="https://github.com/artcoholic/akar-icons-app#readme" target="_blank" rel="noopener" onClick={logClick}>
+      <Button className="button" bg="secondary" color="primary" href="https://github.com/artcoholic/akar-icons-app#readme" target="_blank" rel="noopener" onClick={logClick}>
         <icons.Paper size={16} /> Get started
       </Button>
-      <Toggle onClick={themeToggler} aria-label="Theme Toggle">
-        {theme === 'light' ? <icons.MoonFill /> : <icons.SunFill />}
+      <Toggle onClick={toggler} aria-label="Theme Toggle">
+        <icons.CircleFill size={20} />
       </Toggle>
     </Container>
   )

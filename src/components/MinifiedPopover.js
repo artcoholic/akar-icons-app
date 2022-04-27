@@ -19,11 +19,11 @@ const Container = styled.div`
 `
 
 const Wrapper = styled.div`
-  background: ${props => props.theme.colors.bg.primary};
-  color: ${props => props.theme.colors.content.primary};
+  background: ${props => props.theme.colors.secondary};
+  color: ${props => props.theme.colors.primary};
   border-radius: 8px;
-  border: 1px solid ${props => props.theme.colors.border};
-  box-shadow: ${props => props.theme.colors.boxShadow} 0px 6px 12px 0px;
+  border: 1px solid ${props => props.theme.colors.primary};
+  box-shadow: rgba(15,23,32,0.15) 0px 6px 12px 0px;
   display: flex;
   flex-direction: column;
   max-width: 480px;
@@ -41,13 +41,13 @@ const Header = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid ${props => props.theme.colors.content.tertiary};
+  border-bottom: 1px solid ${props => props.theme.colors.primary};
   .icon-wrapper {
-    --pattern-color: ${props => props.theme.colors.content.tertiary};
+    --pattern-color: ${props => props.theme.colors.pattern};
     padding: 12px;
-    background-image: linear-gradient(45deg, var(--pattern-color) 25%, transparent 25%), 
-                      linear-gradient(-45deg, var(--pattern-color) 25%, transparent 25%), 
-                      linear-gradient(45deg, transparent 75%, var(--pattern-color) 50%), 
+    background-image: linear-gradient(45deg, var(--pattern-color) 25%, transparent 25%),
+                      linear-gradient(-45deg, var(--pattern-color) 25%, transparent 25%),
+                      linear-gradient(45deg, transparent 75%, var(--pattern-color) 50%),
                       linear-gradient(-45deg, transparent 75%, var(--pattern-color) 50%);
     background-size: 10px 10px;
     background-position: 0 0, 0 5px, 5px -5px, -5px 0px;
@@ -67,11 +67,11 @@ const Header = styled.div`
     padding: 16px;
     margin-right: 8px;
     &:hover {
-      background: ${props => props.theme.colors.bg.secondary};
+      background: ${props => props.theme.colors.secondary};
     }
     svg {
       display: block;
-      color: ${props => props.theme.colors.content.primary};
+      color: ${props => props.theme.colors.primary};
     }
   }
 `
@@ -83,13 +83,12 @@ const CodeSnippet = styled.div`
     margin-bottom: .5em;
   }
   .snippet-box {
-    background-color: ${props => props.theme.colors.bg.tertiary};
+    background-color: ${props => props.theme.colors.tertiary};
     padding: 4px;
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid ${props => props.theme.colors.content.tertiary};
     input {
       font-size: 14px;
       padding: 0 1em;
@@ -101,7 +100,7 @@ const CodeSnippet = styled.div`
       outline: none;
       font-family: monospace;
       width: 100%;
-      color: ${props => props.theme.colors.content.primary};;
+      color: ${props => props.theme.colors.secondary};;
     }
     .copy-snippet-btn {
       background: none;
@@ -111,20 +110,23 @@ const CodeSnippet = styled.div`
       justify-content: center;
       position: relative;
       &:hover {
-        background-color: ${props => props.theme.colors.bg.secondary};
+        background-color: ${props => props.theme.colors.secondary};
         .tooltip {
           opacity: 1;
           transform: translateY(-8px);
         }
+        svg {
+        color: ${props => props.theme.colors.primary};
+      }
       }
       svg {
-        color: ${props => props.theme.colors.content.primary};
+        color: ${props => props.theme.colors.secondary};
         stroke-width: 1.2;
       }
       .tooltip {
         position: absolute;
-        background-color: ${props => props.theme.colors.content.primary};
-        color: ${props => props.theme.colors.bg.primary};
+        background-color: ${props => props.theme.colors.primary};
+        color: ${props => props.theme.colors.secondary};
         text-align: center;
         border-radius: 2px;
         font-size: 10px;
@@ -142,7 +144,7 @@ const CodeSnippet = styled.div`
           margin-left: -4px;
           border-width: 4px;
           border-style: solid;
-          border-color: ${props => props.theme.colors.content.primary} transparent transparent transparent;
+          border-color: ${props => props.theme.colors.primary} transparent transparent transparent;
         }
       }
     }
@@ -160,9 +162,6 @@ const CopySVGButton = styled.button`
   align-items: center;
   padding: 15px;
   pointer-events: ${({ copied }) => copied ? 'none' : 'auto'};
-  &:hover {
-    box-shadow: rgb(45 59 66 / 0.15) 0px 6px 12px 0px;
-  }
   &:active {
     box-shadow: none;
   }
@@ -268,8 +267,8 @@ const MinifiedPopover = ({ open, setOpen, name, icons, size, copiedSVG, setCopie
             </CodeSnippet>
             <CopySVGContainer>
               <CopySVGButton
-                bg={copiedSVG ? "bg.primary" : "content.primary"}
-                color={copiedSVG ? "content.primary" : "content.secondary"}
+                bg={copiedSVG ? "secondary" : "primary"}
+                color={copiedSVG ? "primary" : "secondary"}
                 onClick={() => copySVG(name)}
                 copied={copiedSVG}
               >

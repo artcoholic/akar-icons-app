@@ -6,7 +6,7 @@ const Container = styled.div`
   align-items: center;
   position: relative;
   box-sizing: border-box;
-  color: ${props => props.theme.colors.content.primary};
+  color: ${props => props.theme.colors.secondary};
   order: -1;
   flex-grow: 1;
   flex-basis: 0;
@@ -23,18 +23,17 @@ const SearchInput = styled.input`
   border-radius: 4px;
   padding: 12px 16px 12px 48px;
   width: 100%;
-  background: ${props => props.theme.colors.bg.tertiary};
+  background: ${props => props.theme.colors.tertiary};
   line-height:1.5;
   -webkit-appearance: none;
-  color: ${props => props.theme.colors.content.primary};
+  color: ${props => props.theme.colors.secondary};
   transition: ${props => props.theme.transition};
   &:focus, &:active {
    outline: none;
-   box-shadow: 0 0 0 2px ${props => props.theme.colors.content.primary};
-   background: ${props => props.theme.colors.bg.primary};
+   background: ${props => props.theme.colors.primary};
   }
   &::placeholder  {
-    color: ${props => props.theme.colors.content.primary};
+    color: ${props => props.theme.colors.secondary};
     transition: ${props => props.theme.transition};
     opacity: 0.5;
   }
@@ -48,10 +47,10 @@ const ClearButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  color: ${props => props.theme.colors.content.primary};
+  color: ${props => props.theme.colors.secondary};
   border-radius: 4px;
   &:hover {
-    background: ${props => props.theme.colors.bg.secondary};
+    background: ${props => props.theme.colors.primary};
   }
   svg {
     display: block;
@@ -75,14 +74,12 @@ const SearchIcon = styled.div`
 const ForwardSlash = styled.span`
   position: absolute;
   right: 14px;
-  border: 1px solid ${props => props.theme.colors.content.tertiary};
   padding: 2px 8px 4px;
-  color: ${props => props.theme.colors.content.primary};
+  color: ${props => props.theme.colors.secondary};
   border-radius: 4px;
   font-weight: 300;
-  background-color: ${props => props.theme.colors.bg.primary};
+  background-color: ${props => props.theme.colors.primary};
   visibility: hidden;
-  box-shadow: rgba(15,23,32,0.1) 0px 2px 4px 0px;
   transition: ${props => props.theme.transition};
   @media (min-width: 1280px) {
     visibility: visible;
