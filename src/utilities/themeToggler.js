@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 
 const myArray = [
-  "light",
-  "dark",
-  "gray"
+  "Oasis",
+  "Rain Forest",
+  "Dune"
 ];
 let myIndex = 1;
 
 const ThemeToggler = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("Oasis");
   const [mountedComponent, setMountedComponent] = useState(false);
 
 

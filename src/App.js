@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import ThemeToggler from './utilities/themeToggler';
-import { GlobalStyles, lightTheme, darkTheme, grayTheme } from './theme';
+import { GlobalStyles, Oasis, Dune, RainForest } from './theme';
 import * as icons from './icons';
 
 import IconWrapper from './components/IconWrapper';
@@ -85,7 +85,7 @@ const App = () => {
   const { width } = useViewport();
   const breakpoint = 1280;
   const [theme, toggler, mountedComponent] = ThemeToggler();
-  const themeMode = (theme === 'light') ? lightTheme : (theme === 'dark') ? darkTheme : grayTheme;
+  const themeMode = (theme === 'Oasis') ? Oasis : (theme === 'Dune') ? Dune : RainForest;
 
   const [open, setOpen] = useState(false);
   const [name, setName] = useState();

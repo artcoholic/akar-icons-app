@@ -37,7 +37,7 @@ const Toggle = styled.button`
     fill: ${props => props.theme.colors.primary};
   }
   &:hover {
-    background-color: ${props => props.theme.colors.primary};
+    background-color: ${props => props.theme.colors.secondary};
   }
 `
 

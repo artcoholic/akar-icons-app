@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const light = {
+const OasisTheme = {
   colors: {
     primary: '#10284B',
     secondary: '#F6F6EB',
@@ -10,7 +10,7 @@ const light = {
   }
 }
 
-const gray = {
+const DuneTheme = {
   colors: {
     primary: '#35322C',
     secondary: '#EDEBD7',
@@ -20,7 +20,7 @@ const gray = {
   }
 }
 
-const dark = {
+const RainForestTheme = {
   colors: {
     primary: '#2A4729',
     secondary: '#F7FECD',
@@ -34,9 +34,9 @@ export const theme = {
   breakpoints: ['768px'],
 }
 
-export const lightTheme = { ...theme, ...light };
-export const darkTheme = { ...theme, ...dark };
-export const grayTheme = { ...theme, ...gray };
+export const Oasis = { ...theme, ...OasisTheme };
+export const RainForest = { ...theme, ...RainForestTheme };
+export const Dune = { ...theme, ...DuneTheme };
 
 export const GlobalStyles = createGlobalStyle`
   * {

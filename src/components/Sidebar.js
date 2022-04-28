@@ -31,13 +31,17 @@ const Logo = styled.div`
 `
 
 const Toggle = styled.button`
-  padding: 8px;
+  padding: 8px 12px;
   border: none;
   border-radius: 4px;
   background-color: ${props => props.theme.colors.tertiary};
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   svg {
     display: block;
+    color: ${props => props.theme.colors.primary};
     fill: ${props => props.theme.colors.primary};
   }
   &:hover {
@@ -119,6 +123,7 @@ const LinkWrapper = styled.a`
 const Sidebar = ({
   icons,
   toggler,
+  theme,
   amplitude
 }) => {
   const logClick = () => {
@@ -158,7 +163,7 @@ const Sidebar = ({
         }}
       >
         <Toggle onClick={toggler} aria-label="Theme Toggle">
-          <icons.CircleFill size={20} />
+          <icons.Water size={12} /> {theme}
         </Toggle>
         <LinkWrapper className="button" href="https://twitter.com/agwibawa" target="_blank" rel="noopener" bg="#1DA1F2">
           Made by <icons.TwitterFill size={14} color="#1DA1F2" style={{ margin: '0 4px' }} /> agwibawa
