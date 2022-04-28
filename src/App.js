@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import ThemeToggler from './utilities/themeToggler';
 import { GlobalStyles, Oasis, Dune, RainForest } from './theme';
