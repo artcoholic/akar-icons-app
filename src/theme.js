@@ -60,10 +60,11 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
-  button, .button {
+  button, .button, a {
     outline: none;
     &:focus {
-      box-shadow: 0 0 0 4px deepskyblue;
+      outline: 1px dashed magenta;
+      outline-offset: 2px;
     }
     &:active {
       box-shadow: none;

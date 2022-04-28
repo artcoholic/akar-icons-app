@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import ThemeToggler from './utilities/themeToggler';
 import { GlobalStyles, Oasis, Dune, RainForest } from './theme';
@@ -81,6 +81,16 @@ const fuse = new Fuse(DATA.flat(), {
   threshold: 0.2,
 })
 
+const faces = [
+  '( T _ T )',
+  'ಠ_ಠ',
+  '(づ￣ ³￣)づ',
+  'ಥ_ಥ',
+  '(~˘▾˘)~'
+]
+
+const random = [Math.floor(Math.random() * faces.length)];
+
 const App = () => {
   const { width } = useViewport();
   const breakpoint = 1280;
@@ -121,7 +131,7 @@ const App = () => {
           <SearchResults>
             {results.length === 0 && (
               <NoResults>
-                <span style={{ fontSize: "6em" }}>( T _ T )</span>
+                <span style={{ fontSize: "6em" }}>{faces[random]}</span>
                 <span style={{ margin: "2em 0 1em 0" }}>There are no icons for <code>{query}</code></span>
                 <SecondaryLinks className="button" href="https://github.com/artcoholic/akar-icons/issues/new?assignees=artcoholic&labels=enhancement&template=icon-request.md&title=%5BICON+REQUEST%5D" target="_blank"><icons.File size={14} />Request an icon</SecondaryLinks>
               </NoResults>

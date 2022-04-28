@@ -38,7 +38,9 @@ const Toggle = styled.button`
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
+  position: relative;
   svg {
     display: block;
     color: ${props => props.theme.colors.primary};
@@ -46,7 +48,36 @@ const Toggle = styled.button`
   }
   &:hover {
     background-color: ${props => props.theme.colors.secondary};
+    .tooltip {
+      opacity: 1;
+      transform: translateY(-12px);
+    }
   }
+  .tooltip {
+      position: absolute;
+      background-color: ${props => props.theme.colors.secondary};
+      color: ${props => props.theme.colors.primary};
+      text-align: center;
+      border-radius: 2px;
+      font-size: 10px;
+      opacity: 0;
+      top: -24px;
+      text-transform: uppercase;
+      padding: .5em .75em;
+      white-space: nowrap;
+      pointer-events: none;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -4px;
+        border-width: 4px;
+        border-style: solid;
+        border-color: ${props => props.theme.colors.secondary} transparent transparent transparent;
+      }
+    }
 `
 
 const Title = styled.h1`
@@ -117,6 +148,7 @@ const LinkWrapper = styled.a`
   &:hover {
     text-decoration: none;
     background: ${props => props.theme.colors.tertiary};
+    color: ${props => props.theme.colors.primary};
   }
 `
 
@@ -163,6 +195,9 @@ const Sidebar = ({
         }}
       >
         <Toggle onClick={toggler} aria-label="Theme Toggle">
+          <span className="tooltip">
+            Change theme
+          </span>
           <icons.Water size={12} /> {theme}
         </Toggle>
         <LinkWrapper className="button" href="https://twitter.com/agwibawa" target="_blank" rel="noopener" bg="#1DA1F2">

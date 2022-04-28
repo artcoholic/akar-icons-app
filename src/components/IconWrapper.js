@@ -63,7 +63,6 @@ const IconWrapper = ({ children, icon, setOpen, setName, setCopiedSVG, addSpace,
     amplitude.getInstance().logEvent("Icon Clicked", {
       "name": i,
     });
-    console.log(e.currentTarget);
   }
   return (
     <Wrapper onClick={(e) => { handleClick(icon, e) }}>

@@ -82,7 +82,7 @@ const CodeSnippet = styled.div`
   padding: 16px 16px 0;
   .label {
     font-size: 14px;
-    padding-bottom: .5em;
+    margin-bottom: .75em;
     color: ${props => props.theme.colors.primary};
     text-decoration: underline dotted;
     display: flex;
@@ -263,7 +263,7 @@ const Popover = ({ open, setOpen, name, icons, size, stroke, copiedSVG, setCopie
               <div className="snippet-box">
                 <input type="text" value={`<${name} strokeWidth={${stroke}} size={${size}} />`} id="reactSnippet" readOnly />
                 <button className="copy-snippet-btn" onClick={() => copySnippet('reactSnippet')}>
-                  <span className="tooltip" id="myTooltip">
+                  <span className="tooltip">
                     {reactSnippet ? 'Copied!' : 'Copy snippet'}
                   </span>
                   {reactSnippet ? <icons.CircleCheckFill size={16} /> : <icons.Copy size={16} />}
@@ -275,7 +275,7 @@ const Popover = ({ open, setOpen, name, icons, size, stroke, copiedSVG, setCopie
               <div className="snippet-box">
                 <input type="text" value={`<i class="ai${dashed(name)}"></i>`} id="iconFontSnippet" readOnly />
                 <button className="copy-snippet-btn" onClick={() => copySnippet('iconFontSnippet')}>
-                  <span className="tooltip" id="myTooltip">
+                  <span className="tooltip">
                     {iconFontSnippet ? 'Copied!' : 'Copy snippet'}
                   </span>
                   {iconFontSnippet ? <icons.CircleCheckFill size={16} /> : <icons.Copy size={16} />}

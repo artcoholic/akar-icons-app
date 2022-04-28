@@ -50,7 +50,7 @@ const Container = styled.div`
     &:focus {
       outline: none;
       &::-webkit-slider-thumb {
-        box-shadow: 0 0 0 4px deepskyblue;
+        outline: 1px dashed violet;
       }
     }
   }
