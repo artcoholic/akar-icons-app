@@ -27,13 +27,19 @@ const Logo = styled.div`
 `
 
 const Toggle = styled.button`
-  padding: 8px;
+  padding: 10px;
   border: none;
   border-radius: 4px;
   background-color: ${props => props.theme.colors.tertiary};
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
   svg {
     display: block;
+    color: ${props => props.theme.colors.primary};
     fill: ${props => props.theme.colors.primary};
   }
   &:hover {
@@ -61,6 +67,7 @@ const Button = styled.a`
 const Sidebar = ({
   icons,
   toggler,
+  theme,
   amplitude
 }) => {
   const logClick = () => {
@@ -84,7 +91,7 @@ const Sidebar = ({
         <icons.Paper size={16} /> Get started
       </Button>
       <Toggle onClick={toggler} aria-label="Theme Toggle">
-        <icons.CircleFill size={20} />
+        <icons.Water size={16} />
       </Toggle>
     </Container>
   )
