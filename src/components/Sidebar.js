@@ -94,6 +94,20 @@ const Headline = styled.h2`
   color: ${props => props.theme.colors.secondary};
 `
 
+const Note = styled.p`
+  font-size: .75rem;
+  line-height: 1.25;
+  opacity: .5;
+  color: ${props => props.theme.colors.secondary};
+  a {
+    color: ${props => props.theme.colors.secondary};
+    text-decoration: underline;
+    &:hover {
+      color: ${props => props.theme.colors.tertiary};
+    }
+  }
+`
+
 const Button = styled.a`
   -webkit-appearance: none;
   position: relative;
@@ -187,6 +201,7 @@ const Sidebar = ({
           <span name="Get started">Get started</span>
           <icons.ArrowUpRight size={16} style={{ marginLeft: 8 }} />
         </Button>
+        <Note>Akar is free and open source, licensed under <a href="https://raw.githubusercontent.com/artcoholic/akar-icons/master/LICENSE" taget="_blank" rel="noopener">MIT</a>. If you enjoy these icons, please support us by sharing it or with a <a href="https://paypal.me/awibawa" target="_blank" rel="noopener">donation</a>.</Note>
       </div>
       <div
         style={{
