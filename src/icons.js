@@ -289,6 +289,7 @@ export { default as Sparkles } from './icons/sparkles';
 export { default as Music } from './icons/music';
 export { default as MusicNote } from './icons/music-note';
 export { default as MusicAlbum } from './icons/music-album';
+export { default as MusicAlbumFill } from './icons/music-album-fill';
 export { default as Person } from './icons/person';
 export { default as PersonAdd } from './icons/person-add';
 export { default as PersonCheck } from './icons/person-check';

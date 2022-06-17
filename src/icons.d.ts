@@ -298,6 +298,7 @@ export const Sparkles: Icon;
 export const Music: Icon;
 export const MusicNote: Icon;
 export const MusicAlbum: Icon;
+export const MusicAlbumFill: Icon;
 export const Person: Icon;
 export const PersonAdd: Icon;
 export const PersonCheck: Icon;
