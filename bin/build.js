@@ -8,7 +8,7 @@ import processSvg from './processSVG.js';
 import parseName from './utils.js';
 const defaultStyle = process.env.npm_package_config_style || 'stroke';
 import temp from './template.js';
-import icons from '../src/data.json';
+import icons from '../src/data.json' assert {type: "json"};
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
