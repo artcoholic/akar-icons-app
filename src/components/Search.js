@@ -79,10 +79,11 @@ const ForwardSlash = styled.span`
   position: absolute;
   right: 14px;
   padding: 2px 8px 4px;
-  color: ${props => props.theme.colors.secondary};
+  color: ${props => props.theme.colors.primary};
   border-radius: 4px;
-  font-weight: 300;
-  background-color: ${props => props.theme.colors.primary};
+  font-weight: 500;
+  background-color: ${props => props.theme.colors.secondary};
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
   visibility: hidden;
   transition: ${props => props.theme.transition};
   @media (min-width: 1280px) {

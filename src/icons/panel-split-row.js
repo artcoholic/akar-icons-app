@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SidebarLeft = (props) => {
+const PanelSplitRow = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,22 +15,22 @@ const SidebarLeft = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai ai-SidebarLeft"
+      className="ai ai-PanelSplitRow"
     >
       <rect x="2" y="3" width="20" height="18" rx="2"></rect>
-      <path d="M9 3v18"></path>
+      <path d="M12 3v18"></path>
     </svg>
   );
 };
 
-SidebarLeft.propTypes = {
+PanelSplitRow.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-SidebarLeft.defaultProps = {
+PanelSplitRow.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
 
-export default SidebarLeft;
+export default PanelSplitRow;
