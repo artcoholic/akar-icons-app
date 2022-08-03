@@ -30,6 +30,7 @@ const SearchInput = styled.input`
   -webkit-appearance: none;
   color: ${props => props.theme.colors.primary};
   transition: ${props => props.theme.transition};
+  z-index:-1;
   &:focus, &:active {
    outline: none;
    background: ${props => props.theme.colors.primary};
@@ -77,6 +78,7 @@ const SearchIcon = styled.div`
 
 const ForwardSlash = styled.span`
   position: absolute;
+  top: 10px;
   right: 14px;
   padding: 2px 8px 4px;
   color: ${props => props.theme.colors.primary};
@@ -86,6 +88,19 @@ const ForwardSlash = styled.span`
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
   visibility: hidden;
   transition: ${props => props.theme.transition};
+  border: 1px solid ${props => props.theme.colors.primary};
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    position: absolute;
+    top: 2px;
+    left: -1px;
+    z-index: -1;
+    border-radius: inherit;
+    border: inherit;
+  }
   @media (min-width: 1280px) {
     visibility: visible;
   }
