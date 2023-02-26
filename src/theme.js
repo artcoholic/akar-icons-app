@@ -1,41 +1,41 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const OasisTheme = {
   colors: {
-    primary: '#10284B',
-    secondary: '#F6F6EB',
-    tertiary: '#4CAEFF',
-    boxShadow: 'rgba(15,23,32,0.15)',
-    pattern: '#e2e2e2',
-  }
-}
+    primary: "#10284B",
+    secondary: "#F6F6EB",
+    tertiary: "#4CAEFF",
+    boxShadow: "rgba(15,23,32,0.15)",
+    pattern: "#e2e2e2",
+  },
+};
 
 const DuneTheme = {
   colors: {
-    primary: '#35322C',
-    secondary: '#EDEBD7',
-    tertiary: '#FFB224',
-    boxShadow: 'rgba(15,23,32,0.15)',
-    pattern: '#f6f6f6',
-  }
-}
+    primary: "#35322C",
+    secondary: "#EDEBD7",
+    tertiary: "#FFB224",
+    boxShadow: "rgba(15,23,32,0.15)",
+    pattern: "#f6f6f6",
+  },
+};
 
-const RainForestTheme = {
+const ForestTheme = {
   colors: {
-    primary: '#2A4729',
-    secondary: '#F7FECD',
-    tertiary: '#CCDEAB',
-    boxShadow: 'rgba(15,23,32,0)',
-    pattern: '#e2e2e2',
-  }
-}
+    primary: "#2A4729",
+    secondary: "#F7FECD",
+    tertiary: "#CCDEAB",
+    boxShadow: "rgba(15,23,32,0)",
+    pattern: "#e2e2e2",
+  },
+};
 
 export const theme = {
-  breakpoints: ['768px'],
-}
+  breakpoints: ["768px"],
+};
 
 export const Oasis = { ...theme, ...OasisTheme };
-export const RainForest = { ...theme, ...RainForestTheme };
+export const Forest = { ...theme, ...ForestTheme };
 export const Dune = { ...theme, ...DuneTheme };
 
 export const GlobalStyles = createGlobalStyle`
@@ -46,8 +46,8 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: ${props => props.theme.colors.primary};
-    background: ${props => props.theme.colors.secondary};
+    color: ${(props) => props.theme.colors.primary};
+    background: ${(props) => props.theme.colors.secondary};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -84,4 +84,4 @@ export const GlobalStyles = createGlobalStyle`
       flex-direction: row;
     }
   }
-`
+`;

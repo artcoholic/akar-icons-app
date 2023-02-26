@@ -1,20 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-const myArray = [
-  "Oasis",
-  "Rain Forest",
-  "Dune"
-];
+const myArray = ["Oasis", "Forest", "Dune"];
 let myIndex = 1;
 
 const ThemeToggler = () => {
   const [theme, setTheme] = useState("Oasis");
   const [mountedComponent, setMountedComponent] = useState(false);
 
-
-  const setMode = mode => {
-    window.localStorage.setItem('theme', mode);
-    setTheme(mode)
+  const setMode = (mode) => {
+    window.localStorage.setItem("theme", mode);
+    setTheme(mode);
   };
 
   const toggler = () => {
@@ -22,12 +17,12 @@ const ThemeToggler = () => {
   };
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem('theme');
+    const localTheme = window.localStorage.getItem("theme");
     localTheme && setTheme(localTheme);
     setMountedComponent(true);
   }, []);
 
-  return [theme, toggler, mountedComponent]
+  return [theme, toggler, mountedComponent];
 };
 
 export default ThemeToggler;
