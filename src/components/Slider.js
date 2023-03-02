@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { space } from 'styled-system';
+import React from "react";
+import styled from "styled-components";
+import { space } from "styled-system";
 
 const Container = styled.div`
   display: flex;
@@ -18,17 +18,22 @@ const Container = styled.div`
     justify-content: space-between;
     font-size: 14px;
     margin-bottom: 16px;
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
   }
 
-  input[type=range] {
+  input[type="range"] {
     width: 100%;
     appearance: none;
     background: transparent;
 
     &::-webkit-slider-runnable-track {
       height: 2px;
-      background: ${props => props.theme.colors.tertiary};
+      background: ${(props) => props.theme.colors.tertiary};
+      border: none;
+    }
+    &::-moz-range-track {
+      height: 2px;
+      background: ${(props) => props.theme.colors.tertiary};
       border: none;
     }
     &::-webkit-slider-thumb {
@@ -38,13 +43,13 @@ const Container = styled.div`
       height: 24px;
       width: 24px;
       border-radius: 50%;
-      background: ${props => props.theme.colors.primary};
-      border: 4px solid ${props => props.theme.colors.secondary};
+      background: ${(props) => props.theme.colors.primary};
+      border: 4px solid ${(props) => props.theme.colors.secondary};
       margin-top: -11px;
       transition: transform 150ms ease-out;
       &:active {
         transform: scale(1.5);
-        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
       }
     }
     &:focus {
@@ -54,7 +59,7 @@ const Container = styled.div`
       }
     }
   }
-`
+`;
 
 const Slider = ({ title, input, output, min, max, step, mr, ml, type }) => {
   function handleChange(event) {
@@ -62,7 +67,18 @@ const Slider = ({ title, input, output, min, max, step, mr, ml, type }) => {
   }
   return (
     <Container mr={mr} ml={ml}>
-      <label htmlFor={type}><span style={{ textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflow: 'hidden', }}>{title}</span><span>{output}px</span></label>
+      <label htmlFor={type}>
+        <span
+          style={{
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+          }}
+        >
+          {title}
+        </span>
+        <span>{output}px</span>
+      </label>
       <input
         id={type}
         type="range"
@@ -73,7 +89,7 @@ const Slider = ({ title, input, output, min, max, step, mr, ml, type }) => {
         onChange={handleChange}
       />
     </Container>
-  )
-}
+  );
+};
 
 export default Slider;

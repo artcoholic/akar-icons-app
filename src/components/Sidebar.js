@@ -243,7 +243,6 @@ const Sidebar = ({ icons, toggler, theme, amplitude }) => {
           color="primary"
           href="https://github.com/artcoholic/akar-icons-app#readme"
           target="_blank"
-          rel="noopener"
           onClick={logClick}
         >
           <icons.Paper size={16} style={{ marginRight: 8 }} />
@@ -255,12 +254,11 @@ const Sidebar = ({ icons, toggler, theme, amplitude }) => {
           <a
             href="https://raw.githubusercontent.com/artcoholic/akar-icons/master/LICENSE"
             taget="_blank"
-            rel="noopener"
           >
             MIT
           </a>
           . If you enjoy these icons, please support us by sharing it or with a{" "}
-          <a href="https://paypal.me/awibawa" target="_blank" rel="noopener">
+          <a href="https://paypal.me/awibawa" target="_blank">
             donation
           </a>
           .
@@ -280,7 +278,6 @@ const Sidebar = ({ icons, toggler, theme, amplitude }) => {
           className="button"
           href="https://arturowibawa.com"
           target="_blank"
-          rel="noopener"
           bg="#1DA1F2"
         >
           Made by Arturo Wibawa
