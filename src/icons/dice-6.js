@@ -19,7 +19,13 @@ const Dice6 = (props) => {
     >
       <rect x="3" y="3" width="18" height="18" rx="2"></rect>
       <path d="M8 8h.5"></path>
+      <path d="M8.25 7.75v.5"></path>
+      <path d="M8.25 11.75v.5"></path>
+      <path d="M8.25 15.75v.5"></path>
       <path d="M15.5 8h.5"></path>
+      <path d="M15.75 7.75v.5"></path>
+      <path d="M15.75 11.75v.5"></path>
+      <path d="M15.75 15.75v.5"></path>
       <path d="M8 12h.5"></path>
       <path d="M15.5 12h.5"></path>
       <path d="M8 16h.5"></path>
