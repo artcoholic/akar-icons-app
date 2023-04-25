@@ -55,7 +55,7 @@ const SecondaryLinks = styled.a`
   background: ${(props) => props.theme.colors.tertiary};
   color: ${(props) => props.theme.colors.primary};
   padding: 8px 12px;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 14px;
   &:hover {
     background: ${(props) => props.theme.colors.primary};

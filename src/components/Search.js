@@ -1,14 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Container = styled.div`
-  --focus: ${props => props.theme.colors.secondary};
-  --default: ${props => props.theme.colors.primary};
+  --focus: ${(props) => props.theme.colors.secondary};
+  --default: ${(props) => props.theme.colors.primary};
   display: flex;
   align-items: center;
   position: relative;
   box-sizing: border-box;
-  color: ${props => props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.secondary};
   order: -1;
   flex-grow: 1;
   flex-basis: 0;
@@ -18,28 +18,29 @@ const Container = styled.div`
   @media (min-width: 1280px) {
     margin-right: 12px;
   }
-`
+`;
 
 const SearchInput = styled.input`
-  border: none; 
-  border-radius: 4px;
+  border: none;
+  border-radius: 8px;
   padding: 12px 16px 12px 48px;
   width: 100%;
-  background: ${props => props.theme.colors.tertiary};
-  line-height:1.5;
+  background: ${(props) => props.theme.colors.tertiary};
+  line-height: 1.5;
   -webkit-appearance: none;
-  color: ${props => props.theme.colors.primary};
-  transition: ${props => props.theme.transition};
-  &:focus, &:active {
-   outline: none;
-   background: ${props => props.theme.colors.primary};
-   color: ${props => props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.primary};
+  transition: ${(props) => props.theme.transition};
+  &:focus,
+  &:active {
+    outline: none;
+    background: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.secondary};
   }
-  &::placeholder  {
-    color: ${props => props.theme.colors.primary};
-    transition: ${props => props.theme.transition};
+  &::placeholder {
+    color: ${(props) => props.theme.colors.primary};
+    transition: ${(props) => props.theme.transition};
   }
-`
+`;
 
 const ClearButton = styled.button`
   position: absolute;
@@ -49,11 +50,11 @@ const ClearButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  border-radius: 4px;
-  color: ${props => props.focus ? 'var(--focus)' : 'var(--default)'};
+  border-radius: 8px;
+  color: ${(props) => (props.focus ? "var(--focus)" : "var(--default)")};
   &:hover {
-    background: ${props => props.theme.colors.primary};
-    color: ${props => props.theme.colors.secondary};
+    background: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.secondary};
   }
   svg {
     display: block;
@@ -61,35 +62,35 @@ const ClearButton = styled.button`
     left: 0;
     stroke-width: 2;
   }
-`
+`;
 
 const SearchIcon = styled.div`
   position: absolute;
   left: 0px;
   padding: 0 14px;
   box-sizing: border-box;
-  transition: ${props => props.theme.transition};
-  color: ${props => props.focus ? 'var(--focus)' : 'var(--default)'};
+  transition: ${(props) => props.theme.transition};
+  color: ${(props) => (props.focus ? "var(--focus)" : "var(--default)")};
   svg {
     display: block;
   }
-`
+`;
 
 const ForwardSlash = styled.span`
   position: absolute;
   right: 14px;
   padding: 2px 8px 4px;
-  color: ${props => props.theme.colors.primary};
-  border-radius: 4px;
+  color: ${(props) => props.theme.colors.primary};
+  border-radius: 8px;
   font-weight: 500;
-  background-color: ${props => props.theme.colors.secondary};
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
+  background-color: ${(props) => props.theme.colors.secondary};
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
   visibility: hidden;
-  transition: ${props => props.theme.transition};
-  border: 1px solid ${props => props.theme.colors.primary};
+  transition: ${(props) => props.theme.transition};
+  border: 1px solid ${(props) => props.theme.colors.primary};
   z-index: 0;
   &:after {
-    content: '/';
+    content: "/";
     background: inherit;
     position: absolute;
     padding: inherit;
@@ -105,46 +106,48 @@ const ForwardSlash = styled.span`
   @media (min-width: 1280px) {
     visibility: visible;
   }
-`
+`;
 
 const Search = ({ query, updateQuery, icons }) => {
   const [focus, setFocus] = React.useState(false);
   const searchInput = React.useRef();
 
   function onSearch({ currentTarget }) {
-    updateQuery(currentTarget.value)
-  };
+    updateQuery(currentTarget.value);
+  }
 
   function onClear() {
     searchInput.current.focus();
-    updateQuery('');
+    updateQuery("");
   }
 
   function autoFocus(e) {
-    if (e.key === '/') {
+    if (e.key === "/") {
       searchInput.current.focus();
       e.preventDefault();
     }
   }
 
   function autoClear(e) {
-    if (e.key === 'Escape') {
-      updateQuery('');
+    if (e.key === "Escape") {
+      updateQuery("");
     }
   }
 
   React.useEffect(() => {
-    document.addEventListener('keydown', autoFocus);
-    document.addEventListener('keydown', autoClear);
+    document.addEventListener("keydown", autoFocus);
+    document.addEventListener("keydown", autoClear);
     return () => {
-      document.removeEventListener('keydown', autoFocus);
-      document.removeEventListener('keydown', autoClear);
-    }
-  })
+      document.removeEventListener("keydown", autoFocus);
+      document.removeEventListener("keydown", autoClear);
+    };
+  });
 
   return (
     <Container>
-      <SearchIcon focus={focus}><icons.Search size={20} /></SearchIcon>
+      <SearchIcon focus={focus}>
+        <icons.Search size={20} />
+      </SearchIcon>
       <SearchInput
         ref={searchInput}
         type="text"
@@ -152,7 +155,9 @@ const Search = ({ query, updateQuery, icons }) => {
         value={query}
         onChange={onSearch}
         placeholder={`Search ${Object.keys(icons).length} icons`}
-        onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
+        onKeyPress={(e) => {
+          e.key === "Enter" && e.preventDefault();
+        }}
         onFocus={() => setFocus(true)}
         onBlur={() => setFocus(false)}
         aria-label="Search"
@@ -164,7 +169,7 @@ const Search = ({ query, updateQuery, icons }) => {
       )}
       {!query && !focus && <ForwardSlash>/</ForwardSlash>}
     </Container>
-  )
-}
+  );
+};
 
 export default Search;

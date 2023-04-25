@@ -33,7 +33,7 @@ const Logo = styled.div`
 const Toggle = styled.button`
   padding: 8px 12px;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: ${(props) => props.theme.colors.tertiary};
   cursor: pointer;
   display: flex;
@@ -114,7 +114,7 @@ const Button = styled.a`
   position: relative;
   border: 0;
   padding: 0px 1.2em;
-  border-radius: 4px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -157,7 +157,7 @@ const Button = styled.a`
 const LinkWrapper = styled.a`
   display: flex;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 8px 12px;
   color: ${(props) => props.theme.colors.secondary};
   &:hover {
