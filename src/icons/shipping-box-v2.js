@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ShippingBoxV2 = (props) => {
-  const { color, size, ...otherProps } = props;
+const ShippingBoxV2 = ({
+  color = 'currentColor',
+  size = '24',
+  ...otherProps
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -28,11 +31,6 @@ const ShippingBoxV2 = (props) => {
 ShippingBoxV2.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-ShippingBoxV2.defaultProps = {
-  color: 'currentColor',
-  size: '24',
 };
 
 export default ShippingBoxV2;

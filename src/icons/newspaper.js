@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Newspaper = (props) => {
-  const { color, size, ...otherProps } = props;
+const Newspaper = ({ color = 'currentColor', size = '24', ...otherProps }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -29,11 +28,6 @@ const Newspaper = (props) => {
 Newspaper.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Newspaper.defaultProps = {
-  color: 'currentColor',
-  size: '24',
 };
 
 export default Newspaper;

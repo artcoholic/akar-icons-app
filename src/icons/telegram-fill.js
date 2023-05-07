@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TelegramFill = (props) => {
-  const { color, size, ...otherProps } = props;
+const TelegramFill = ({
+  color = 'currentColor',
+  size = '24',
+  ...otherProps
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -32,11 +35,6 @@ const TelegramFill = (props) => {
 TelegramFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-TelegramFill.defaultProps = {
-  color: 'currentColor',
-  size: '24',
 };
 
 export default TelegramFill;

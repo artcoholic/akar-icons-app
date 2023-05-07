@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ArrowCounterClockwise = (props) => {
-  const { color, size, ...otherProps } = props;
+const ArrowCounterClockwise = ({
+  color = 'currentColor',
+  size = '24',
+  ...otherProps
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -26,11 +29,6 @@ const ArrowCounterClockwise = (props) => {
 ArrowCounterClockwise.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-ArrowCounterClockwise.defaultProps = {
-  color: 'currentColor',
-  size: '24',
 };
 
 export default ArrowCounterClockwise;

@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PeopleGroup = (props) => {
-  const { color, size, ...otherProps } = props;
+const PeopleGroup = ({
+  color = 'currentColor',
+  size = '24',
+  ...otherProps
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -30,11 +33,6 @@ const PeopleGroup = (props) => {
 PeopleGroup.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-PeopleGroup.defaultProps = {
-  color: 'currentColor',
-  size: '24',
 };
 
 export default PeopleGroup;

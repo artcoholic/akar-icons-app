@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const OpenEnvelope = (props) => {
-  const { color, size, ...otherProps } = props;
+const OpenEnvelope = ({
+  color = 'currentColor',
+  size = '24',
+  ...otherProps
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -26,11 +29,6 @@ const OpenEnvelope = (props) => {
 OpenEnvelope.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-OpenEnvelope.defaultProps = {
-  color: 'currentColor',
-  size: '24',
 };
 
 export default OpenEnvelope;

@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const NormalScreen = (props) => {
-  const { color, size, ...otherProps } = props;
+const NormalScreen = ({
+  color = 'currentColor',
+  size = '24',
+  ...otherProps
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -28,11 +31,6 @@ const NormalScreen = (props) => {
 NormalScreen.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-NormalScreen.defaultProps = {
-  color: 'currentColor',
-  size: '24',
 };
 
 export default NormalScreen;

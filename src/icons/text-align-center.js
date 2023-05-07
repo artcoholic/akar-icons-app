@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TextAlignCenter = (props) => {
-  const { color, size, ...otherProps } = props;
+const TextAlignCenter = ({
+  color = 'currentColor',
+  size = '24',
+  ...otherProps
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -25,11 +28,6 @@ const TextAlignCenter = (props) => {
 TextAlignCenter.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-TextAlignCenter.defaultProps = {
-  color: 'currentColor',
-  size: '24',
 };
 
 export default TextAlignCenter;

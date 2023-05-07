@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Save = (props) => {
-  const { color, size, ...otherProps } = props;
+const Save = ({ color = 'currentColor', size = '24', ...otherProps }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -28,11 +27,6 @@ const Save = (props) => {
 Save.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-Save.defaultProps = {
-  color: 'currentColor',
-  size: '24',
 };
 
 export default Save;

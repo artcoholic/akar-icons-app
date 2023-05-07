@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PointerLeftFill = (props) => {
-  const { color, size, ...otherProps } = props;
+const PointerLeftFill = ({
+  color = 'currentColor',
+  size = '24',
+  ...otherProps
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -25,11 +28,6 @@ const PointerLeftFill = (props) => {
 PointerLeftFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-PointerLeftFill.defaultProps = {
-  color: 'currentColor',
-  size: '24',
 };
 
 export default PointerLeftFill;

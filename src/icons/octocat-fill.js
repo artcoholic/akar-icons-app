@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const OctocatFill = (props) => {
-  const { color, size, ...otherProps } = props;
+const OctocatFill = ({
+  color = 'currentColor',
+  size = '24',
+  ...otherProps
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -21,11 +24,6 @@ const OctocatFill = (props) => {
 OctocatFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-OctocatFill.defaultProps = {
-  color: 'currentColor',
-  size: '24',
 };
 
 export default OctocatFill;

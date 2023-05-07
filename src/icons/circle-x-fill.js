@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CircleXFill = (props) => {
-  const { color, size, ...otherProps } = props;
+const CircleXFill = ({
+  color = 'currentColor',
+  size = '24',
+  ...otherProps
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -25,11 +28,6 @@ const CircleXFill = (props) => {
 CircleXFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-CircleXFill.defaultProps = {
-  color: 'currentColor',
-  size: '24',
 };
 
 export default CircleXFill;

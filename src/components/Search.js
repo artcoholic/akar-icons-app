@@ -35,6 +35,7 @@ const SearchInput = styled.input`
     outline: none;
     background: ${(props) => props.theme.colors.primary};
     color: ${(props) => props.theme.colors.secondary};
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
   }
   &::placeholder {
     color: ${(props) => props.theme.colors.primary};
@@ -79,30 +80,12 @@ const SearchIcon = styled.div`
 const ForwardSlash = styled.span`
   position: absolute;
   right: 14px;
-  padding: 2px 8px 4px;
   color: ${(props) => props.theme.colors.primary};
-  border-radius: 8px;
   font-weight: 500;
-  background-color: ${(props) => props.theme.colors.secondary};
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
   visibility: hidden;
   transition: ${(props) => props.theme.transition};
-  border: 1px solid ${(props) => props.theme.colors.primary};
   z-index: 0;
-  &:after {
-    content: "/";
-    background: inherit;
-    position: absolute;
-    padding: inherit;
-    top: -4px;
-    left: -1px;
-    z-index: 2;
-    border-radius: inherit;
-    border: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  opacity: 0.4;
   @media (min-width: 1280px) {
     visibility: visible;
   }
@@ -122,7 +105,7 @@ const Search = ({ query, updateQuery, icons }) => {
   }
 
   function autoFocus(e) {
-    if (e.key === "/") {
+    if (e.metaKey && e.key === "k") {
       searchInput.current.focus();
       e.preventDefault();
     }
@@ -167,7 +150,7 @@ const Search = ({ query, updateQuery, icons }) => {
           <icons.Cross size={14} strokeWidth={3} />
         </ClearButton>
       )}
-      {!query && !focus && <ForwardSlash>/</ForwardSlash>}
+      {!query && !focus && <ForwardSlash>⌘K</ForwardSlash>}
     </Container>
   );
 };

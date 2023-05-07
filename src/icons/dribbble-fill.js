@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DribbbleFill = (props) => {
-  const { color, size, ...otherProps } = props;
+const DribbbleFill = ({
+  color = 'currentColor',
+  size = '24',
+  ...otherProps
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -32,11 +35,6 @@ const DribbbleFill = (props) => {
 DribbbleFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-DribbbleFill.defaultProps = {
-  color: 'currentColor',
-  size: '24',
 };
 
 export default DribbbleFill;

@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SpotifyFill = (props) => {
-  const { color, size, ...otherProps } = props;
+const SpotifyFill = ({
+  color = 'currentColor',
+  size = '24',
+  ...otherProps
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -28,11 +31,6 @@ const SpotifyFill = (props) => {
 SpotifyFill.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
-SpotifyFill.defaultProps = {
-  color: 'currentColor',
-  size: '24',
 };
 
 export default SpotifyFill;
