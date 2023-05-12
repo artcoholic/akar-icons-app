@@ -148,7 +148,7 @@ const CodeSnippet = styled.div`
         background-color: ${(props) => props.theme.colors.primary};
         color: ${(props) => props.theme.colors.secondary};
         text-align: center;
-        border-radius: 2px;
+        border-radius: 4px;
         font-size: 10px;
         opacity: 0;
         top: -22px;

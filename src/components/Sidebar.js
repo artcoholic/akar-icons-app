@@ -58,7 +58,7 @@ const Toggle = styled.button`
     background-color: ${(props) => props.theme.colors.secondary};
     color: ${(props) => props.theme.colors.primary};
     text-align: center;
-    border-radius: 2px;
+    border-radius: 4px;
     font-size: 10px;
     opacity: 0;
     top: -24px;
