@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Reciept = ({ color = 'currentColor', size = '24', ...otherProps }) => {
+const Receipt = ({ color = 'currentColor', size = '24', ...otherProps }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,7 +14,7 @@ const Reciept = ({ color = 'currentColor', size = '24', ...otherProps }) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
-      className="ai ai-Reciept"
+      className="ai ai-Receipt"
     >
       <path d="M19 21H7a4 4 0 0 1-4-4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v13c0 1.657.343 3 2 3z"></path>
       <path d="M21 10a2 2 0 0 0-2-2h-2v10.5c0 1.38.62 2.5 2 2.5s2-1.12 2-2.5V10z"></path>
@@ -25,9 +25,9 @@ const Reciept = ({ color = 'currentColor', size = '24', ...otherProps }) => {
   );
 };
 
-Reciept.propTypes = {
+Receipt.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-export default Reciept;
+export default Receipt;
